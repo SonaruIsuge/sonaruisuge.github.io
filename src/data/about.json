@@ -1,0 +1,28 @@
+{
+    "about": {
+        "name": {
+            "en": "Javier Castillo",
+            "es": "Javier Castillo"
+        },
+        "description": {
+            "en": "Technologist in Information Systems and Full Stack Developer with more than 2 years of experience, specialized in creating modern, scalable and user-centered solutions.",
+            "es": "Tecnólogo en Sistemas de Información y Desarrollador Full Stack con más de 2 años de experiencia, especializado en la creación de soluciones modernas, escalables y centradas en el usuario."
+        },
+        "roleTitle": {
+            "en": "Full Stack Developer",
+            "es": "Desarrollador Full Stack"
+        },
+        "aboutDesc": {
+            "en": "I am a Full Stack Developer with experience building end-to-end web applications, from architecture design to implementation and deployment. I work integrating APIs, databases, and modern services, with a focus on performance, maintainability, and user experience. I adapt well to collaborative teams, follow development best practices, and aim to deliver stable solutions that bring real business value. I am interested in remote or hybrid opportunities where I can continue growing professionally and contribute to well-structured projects.",
+            "es": "Soy un Desarrollador Full Stack con experiencia en la construcción de aplicaciones web de extremo a extremo, desde el diseño de arquitectura hasta la implementación y despliegue. Trabajo integrando APIs, bases de datos y servicios modernos, con un enfoque en el rendimiento, la mantenibilidad y la experiencia del usuario. Me adapto bien a equipos colaborativos, sigo las mejores prácticas de desarrollo y busco entregar soluciones estables que aporten un valor real al negocio. Estoy interesado en oportunidades remotas o híbridas donde pueda seguir creciendo profesionalmente y contribuir a proyectos bien estructurados."
+        }
+    },
+    "techStack": [
+        "C",
+        "C++",
+        "C#",
+        "Unity3D",
+        "Python",
+        "JavaScript"
+    ]
+}

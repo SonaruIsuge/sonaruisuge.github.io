@@ -1,0 +1,86 @@
+{
+    "about": {
+        "greeting": {
+            "en": "Hello, I'm",
+            "es": "Hola, soy"
+        },
+        "availability": {
+            "en": "Open to work",
+            "es": "Disponible para trabajar"
+        },
+        "viewProjects": {
+            "en": "View Projects",
+            "es": "Ver Proyectos"
+        },
+        "getInTouch": {
+            "en": "Get In Touch",
+            "es": "Contactar"
+        },
+        "downloadCv": {
+            "en": "Download CV",
+            "es": "Descargar CV"
+        },
+        "aboutMe": {
+            "en": "About Me",
+            "es": "Sobre Mí"
+        },
+        "tech": {
+            "en": "Tech Stack",
+            "es": "Tecnológica"
+        }
+    },
+    "projects": {
+        "subtitle": {
+            "en": "Selected Work",
+            "es": "Trabajos Seleccionados"
+        },
+        "title": {
+            "en": "Projects",
+            "es": "Proyectos"
+        },
+        "description": {
+            "en": "A collection of projects showcasing my skills in full-stack development.",
+            "es": "Una colección de proyectos que muestran mis habilidades en desarrollo full-stack."
+        }
+    },
+    "work": {
+        "subtitle": {
+            "en": "My Journey",
+            "es": "Mi Trayectoria"
+        },
+        "title": {
+            "en": "Work Experience",
+            "es": "Experiencia Laboral"
+        },
+        "description": {
+            "en": "A timeline of my professional journey and achievements.",
+            "es": "Una línea de tiempo de mi trayectoria profesional y logros."
+        }
+    },
+    "contact": {
+        "getInTouch": {
+            "en": "Get in Touch",
+            "es": "Contactar"
+        },
+        "letConnect": {
+            "en": "Let's Connect",
+            "es": "Conectemos"
+        },
+        "description": {
+            "en": "Have a project in mind or want to collaborate? I'd love to hear from you.",
+            "es": "¿Tienes un proyecto en mente o quieres colaborar? Me encantaría saber de ti."
+        },
+        "connectElsewhere": {
+            "en": "Connect Elsewhere",
+            "es": "Conéctate en otros lugares"
+        },
+        "description2": {
+            "en": "Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
+            "es": "Siéntete libre de contactarme a través de cualquiera de estas plataformas. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de tus visiones."
+        },
+        "contactInfo": {
+            "en": "Contact Info",
+            "es": "Información de Contacto"
+        }
+    }
+}
