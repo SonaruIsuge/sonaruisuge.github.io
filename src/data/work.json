@@ -1,47 +1,32 @@
 [
     {
         "year": {
-            "en": "01/2026 - Present",
-            "jp": "01/2026 - Actualidad"
+            "en": "10/2024 - 06/2026",
+            "jp": "10/2024 - 06/2026"
         },
         "title": {
-            "en": "Systems Analyst",
-            "jp": "Analista de Sistemas"
+            "en": "Game Engineer",
+            "jp": "ゲームエンジニア"
         },
-        "company": "Operations Maritime Fluvial Integral S.A.S.",
+        "company": "株式会社Skeleton Crew Studio",
         "description": {
-            "en": "Systems analyst focused on web development, process analysis and business digitization. Led the development of the corporate website and participated in the definition, design and implementation of internal technological solutions, process automation and continuous improvement of systems, connecting operational needs with scalable technical solutions.",
-            "jp": "Analista de sistemas con enfoque en desarrollo web, análisis de procesos y digitalización empresarial. Lideré el desarrollo de la web corporativa y participo en la definición, diseño e implementación de soluciones tecnológicas internas, automatización de procesos y mejora continua de sistemas, conectando necesidades operativas con soluciones técnicas escalables."
+            "en": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "jp": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
     },
     {
         "year": {
-            "en": "01/2025 - 06/2025",
-            "jp": "01/2025 - 06/2025"
+            "en": "02/2023 - 07/2023",
+            "jp": "02/2023 - 07/2023"
         },
         "title": {
-            "en": "Fullstack Developer",
-            "jp": "Desarrollador Fullstack"
+            "en": "Intern",
+            "jp": "インターン"
         },
-        "company": "Ingeniería Sistemas y Servicios E.U.",
+        "company": "株式会社Skeleton Crew Studio",
         "description": {
-            "en": "Developed end-to-end web applications using Django and React, integrating REST APIs and PostgreSQL. Notable projects: reporting system with export to Excel/JSON/PDF/XML; hotel room management dashboard; dynamic report generator with web filters; image analysis module using Python and OpenCV.",
-            "jp": "Desarrollé aplicaciones web de extremo a extremo utilizando Django y React, integrando Api REST, bases de datos relacionales (PostgreSQL) y componentes interactivos. Entre los proyectos destacados: Sistema de reportes con exportación a Excel, JSON, PDF y XML. Dashboard para la gestión de habitaciones de hotel. Generador de reportes dinámicos con filtros web. Módulo de análisis de imágenes con Python y OpenCV."
-        }
-    },
-    {
-        "year": {
-            "en": "06/2023 - 12/2024",
-            "jp": "06/2023 - 12/2024"
-        },
-        "title": {
-            "en": "Freelance Developer & IT Consultant",
-            "jp": "Desarrollador y Consultor de TI Freelance"
-        },
-        "company": "Freelance",
-        "description": {
-            "en": "Managed and executed software and web projects for local businesses: desktop and web applications for inventory, orders and production. Highlight: Java application for jewelry calculations (measures and weights), optimizing resources. Also provided web development, technical support and IT consulting.",
-            "jp": "Gestión y ejecución de proyectos de desarrollo de software, sitios web y soporte técnico para negocios locales, adaptando cada solución a las necesidades del cliente. Desarrollo de Software Específico: Creación de aplicaciones de escritorio y web para gestión de inventarios, pedidos y producción. Destaca una aplicación en Java para joyería que calculaba medidas y pesos exactos de materiales."
+            "en": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "jp": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
     }
 ]
