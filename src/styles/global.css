@@ -17,11 +17,11 @@ html.dark {
 }
 
 /* i18n Visibility Utilities */
-html[data-lang="es"] .locale-en {
+html[data-lang="jp"] .locale-en {
 	display: none !important;
 }
 
-html[data-lang="en"] .locale-es {
+html[data-lang="en"] .locale-jp {
 	display: none !important;
 }
 

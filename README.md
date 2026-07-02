@@ -1,188 +1,192 @@
-# Javier Castillo - Portafolio
+# Yiho Chen - Portfolio
 
-Un portafolio moderno, responsive y bilingüe construido con **Astro** y **Tailwind CSS**. Presenta experiencia profesional, habilidades y proyectos como Desarrollador Full Stack.
+A modern, responsive, bilingual portfolio website built with **Astro** and **Tailwind CSS**. It presents professional experience, skills, projects, and contact information for Yiho Chen.
 
-🌐 **Sitio en vivo:** [Ver Portafolio](https://javiercastillo.dev)
+> **Fork notice:** This project was forked from [JavierDvlpr/portfolio](https://github.com/JavierDvlpr/portfolio) and customized for Yiho Chen.
 
-## ✨ Características
+## Features
 
-- 🌍 **Soporte Bilingüe** - Inglés y Español con cambio de idioma fluido
-- 🌙 **Modo Oscuro** - Toggle de tema claro/oscuro con persistencia en localStorage
-- 📱 **Totalmente Responsivo** - Diseño mobile-first con menú hamburguesa para navegación móvil
-- ⚡ **Alto Rendimiento** - Construido con Astro para generación de sitios estáticos optimizada
-- 🎨 **Diseño Moderno** - Tailwind CSS con animaciones personalizadas y efectos de gradiente
-- 🌈 **Animaciones Arcoíris** - Efectos de borde animado en elementos interactivos
-- ♿ **Accesible** - HTML semántico y etiquetas ARIA para mejor accesibilidad
-- 📊 **Línea de Tiempo Laboral** - Experiencia profesional con descripciones multilingües
-- 🔗 **Integración Social** - Enlaces a GitHub, LinkedIn, Email y Teléfono (SMS)
+- **Bilingual support** - English and Japanese content with smooth language switching
+- **Dark mode** - Light/dark theme toggle with localStorage persistence
+- **Fully responsive** - Mobile-first layout with a hamburger menu for small screens
+- **High performance** - Built with Astro for optimized static site generation
+- **Modern design** - Tailwind CSS styling with custom animations and gradients
+- **Rainbow animations** - Animated border effects on interactive elements
+- **Accessible markup** - Semantic HTML and ARIA labels for better accessibility
+- **Work timeline** - Professional experience with multilingual descriptions
+- **Social integration** - Links for GitHub, LinkedIn, and email
 
-## 🏗️ Estructura del Proyecto
+## Project Structure
 
-```
+```text
 portfolio/
 ├── src/
 │   ├── components/
-│   │   ├── Header.astro      # Navegación con toggles de idioma/tema
-│   │   ├── Footer.astro      # Pie de página con tech stack
+│   │   ├── Header.astro      # Navigation with language/theme toggles
+│   │   └── Footer.astro      # Footer with tech stack
 │   ├── layouts/
-│   │   └── Layout.astro      # Layout base con scripts globales
+│   │   └── Layout.astro      # Base layout with global scripts
 │   ├── pages/
-│   │   ├── index.astro       # Página de inicio con perfil
-│   │   ├── work.astro        # Línea de tiempo de experiencia laboral
-│   │   ├── projects.astro    # Vitrina de proyectos
-│   │   └── contact.astro     # Información de contacto
+│   │   ├── index.astro       # Home page with profile
+│   │   ├── work.astro        # Work experience timeline
+│   │   ├── projects.astro    # Project showcase
+│   │   └── contact.astro     # Contact information
 │   ├── assets/
-│   │   ├── photo.jpeg        # Foto de perfil
-│   │   ├── Astro_dark.svg    # Logo de Astro
-│   │   ├── Astro_light.svg   # Logo de Astro (claro)
-│   │   └── tailwindcss.svg   # Logo de Tailwind CSS
+│   │   ├── photo.jpeg        # Profile photo
+│   │   ├── Astro_dark.svg    # Astro logo
+│   │   ├── Astro_light.svg   # Astro logo for light theme
+│   │   └── tailwindcss.svg   # Tailwind CSS logo
+│   ├── data/                 # Portfolio and translation data
+│   ├── project-descriptions/ # Project description markdown files
 │   └── styles/
-│       └── global.css        # Animaciones y utilidades personalizadas
+│       └── global.css        # Custom animations and utilities
 ├── public/
-│   └── favicon.svg           # Favicon del sitio
-├── astro.config.mjs          # Configuración de Astro
-├── tailwind.config.mjs       # Configuración de Tailwind CSS
-├── tsconfig.json             # Configuración de TypeScript
-└── package.json              # Dependencias del proyecto
-
+│   └── favicon.svg           # Site favicon
+├── astro.config.mjs          # Astro configuration
+├── tsconfig.json             # TypeScript configuration
+└── package.json              # Project dependencies and scripts
 ```
 
-## 🚀 Primeros Pasos
+## Getting Started
 
-### Requisitos Previos
+### Prerequisites
 
-- Node.js 16+ 
-- npm o yarn
+- Node.js 16+
+- npm or yarn
 
-### Instalación
+### Installation
 
-1. Clona el repositorio:
+1. Clone the repository:
+
 ```bash
-git clone https://github.com/JavierDvlpr/portfolio.git
-cd portfolio
+git clone https://github.com/SonaruIsuge/sonaruisuge.github.io.git
+cd sonaruisuge.github.io
 ```
 
-2. Instala las dependencias:
+2. Install dependencies:
+
 ```bash
 npm install
 ```
 
-3. Inicia el servidor de desarrollo:
+3. Start the development server:
+
 ```bash
 npm run dev
 ```
 
-Abre [http://localhost:4321](http://localhost:4321) en tu navegador para ver tu portafolio.
+Open [http://localhost:4321](http://localhost:4321) in your browser to view the portfolio.
 
-## 🛠️ Stack de Tecnología
+## Technology Stack
 
 **Frontend:**
+
 - Astro
-- React (opcional, para componentes dinámicos)
+- React (optional, for dynamic components)
 - TypeScript
 - Tailwind CSS
 
-**Características:**
-- Diseño Responsivo (Mobile-First)
-- Soporte Dark Mode
-- Multilingüe (i18n)
-- Animaciones CSS Personalizadas
+**Features:**
 
-## 📝 Configuración
+- Mobile-first responsive design
+- Dark mode support
+- Multilingual content (i18n)
+- Custom CSS animations
 
-### Sistema de Idioma
+## Configuration
 
-El portafolio utiliza un sistema de idioma personalizado con atributos `data-en` y `data-es`. La preferencia de idioma se almacena en localStorage.
+### Language System
 
-Para agregar traducciones:
-1. Añade atributos `data-en` y `data-es` a los elementos
-2. La función `updatePageContent()` maneja la visualización según el idioma actual
+The portfolio uses a custom language system with `data-en` and `data-jp` attributes. The selected language is stored in localStorage.
 
-### Sistema de Tema
+To add translations:
 
-El toggle de modo oscuro/claro está disponible en el encabezado. La preferencia de tema se persiste en localStorage y se sincroniza entre cargas de página.
+1. Add `data-en` and `data-jp` attributes to the relevant elements.
+2. Use `updatePageContent()` to display the content for the current language.
 
-## 🎨 Personalización
+### Theme System
 
-### Actualizar Información Personal
+The dark/light mode toggle is available in the header. The selected theme is stored in localStorage and restored on page load.
 
-Edita los siguientes archivos para personalizar tu portafolio:
+## Customization
 
-- `src/pages/index.astro` - Perfil, sobre mí y tech stack
-- `src/pages/work.astro` - Entradas de experiencia laboral
-- `src/pages/contact.astro` - Información de contacto y enlaces sociales
-- `src/components/Header.astro` - Estructura de navegación
+### Update Personal Information
 
-### Modificar Colores
+Edit these files to customize the portfolio:
 
-Edita `tailwind.config.mjs` para personalizar el esquema de colores. El portafolio utiliza:
-- Fondo: white/gray-950
-- Texto: gray-900/white (consciente del dark mode)
-- Acentos: gradientes arcoíris en animaciones
+- `src/pages/index.astro` - Profile, about section, and tech stack
+- `src/pages/work.astro` - Work experience entries
+- `src/pages/contact.astro` - Contact information and social links
+- `src/components/Header.astro` - Navigation structure
 
-### Actualizar Visualización de Tech Stack
+### Modify Colors
 
-El ticker de tecnologías en la página de inicio se puede editar en `src/pages/index.astro`. Modifica el array de tecnologías con las tuyas propias.
+Update the theme and utility classes in the source files. The current design uses:
 
-## 📦 Compilar e Implementar
+- Background: `white` / `gray-950`
+- Text: `gray-900` / `white` with dark-mode variants
+- Accents: rainbow gradients and animation effects
 
-### Compilar para Producción
+### Update the Tech Stack Display
+
+The technology ticker on the home page can be edited in `src/data/about.json`. Replace the technology array with your own tools and skills.
+
+## Build and Deployment
+
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-Esto genera un sitio estático en el directorio `dist/`.
+This generates a static site in the `dist/` directory.
 
-### Vista Previa de la Compilación
+### Preview the Production Build
 
 ```bash
 npm run preview
 ```
 
-### Implementar en Vercel
-
-El proyecto está optimizado para Vercel:
+### Deploy to Vercel
 
 ```bash
 npm install -g vercel
 vercel
 ```
 
-### Implementar en Netlify
+### Deploy to Netlify
 
-1. Conecta tu repositorio de GitHub a Netlify
-2. Establece comando de compilación: `npm run build`
-3. Establece directorio de publicación: `dist/`
-4. ¡Implementa!
+1. Connect this GitHub repository to Netlify.
+2. Set the build command to `npm run build`.
+3. Set the publish directory to `dist/`.
+4. Deploy the site.
 
-## 🔧 Comandos Disponibles
+## Available Commands
 
-| Comando | Propósito |
-|---------|-----------|
-| `npm run dev` | Inicia el servidor de desarrollo local |
-| `npm run build` | Compila el sitio para producción |
-| `npm run preview` | Visualiza la compilación de producción |
-| `npm run astro add` | Añade integraciones de Astro |
-| `npm run astro check` | Verifica tipos en tu código |
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run build` | Build the site for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run astro add` | Add Astro integrations |
+| `npm run astro check` | Run Astro checks and type validation |
 
-## 📧 Contacto
+## Contact
 
-- **Email:** javiercastillo.5445@gmail.com
-- **GitHub:** [@JavierDvlpr](https://github.com/JavierDvlpr)
-- **LinkedIn:** [javiercastillodev](https://www.linkedin.com/in/javiercastillodev/)
-- **Teléfono:** +57 3054077706
+- **Email:** bread511206@gmail.com
+- **GitHub:** [@SonaruIsuge](https://github.com/SonaruIsuge)
+- **LinkedIn:** [Yiho Chen](https://www.linkedin.com/in/yiho-chen/)
 
-## 📄 Licencia
+## License
 
-Este proyecto es de código abierto y está disponible bajo la Licencia MIT.
+This project is open source and available under the MIT License.
 
-## 🙏 Reconocimientos
+## Acknowledgements
 
-- [Astro](https://astro.build) - Generador de sitios estáticos
-- [Tailwind CSS](https://tailwindcss.com) - Framework CSS orientado a utilidades
-- Inspirado en principios modernos de diseño web
+- [Astro](https://astro.build) - Static site generator
+- [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+- Original portfolio by [Javier Castillo](https://github.com/JavierDvlpr)
 
 ---
 
-**Hecho con ❤️ por Javier Castillo | 2026**
+**Made with care by Yiho Chen | 2026**
