@@ -6,13 +6,14 @@ import heroPhoto from '../assets/photo.jpeg';
 import cvFile from '../assets/CV/CV_Javier_Castillo.pdf';
 import aboutRaw from '../about-descriptions/about.md?raw';
 import aboutEnRaw from '../about-descriptions/about.en.md?raw';
+import techStackRaw from '../about-descriptions/tech-stack.md?raw';
 
-import { parseTranslationMd } from '../utils/parseTranslationMd';
+import { parseTranslationMd, parseTechStackMd } from '../utils/parseTranslationMd';
 
 
 const en = parseTranslationMd(aboutEnRaw);
 const jp = parseTranslationMd(aboutRaw);
-
+const techStack = parseTechStackMd(techStackRaw);
 const allKeys = new Set([...Object.keys(en), ...Object.keys(jp)]);
 
 const translations = Object.fromEntries(
@@ -91,68 +92,18 @@ const translations = Object.fromEntries(
 			<div class="tech-ticker-container">
 				<div class="tech-ticker-content">
 					<!-- First set -->
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">JavaScript</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">TypeScript</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">React</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Next.js</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Astro</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Tailwind CSS</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Node.js</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">PostgreSQL</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">MongoDB</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Docker</p>
-					</div>
+					{techStack.map((tech) => (
+						<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
+							<p class="text-sm font-medium text-gray-900 dark:text-white">{tech}</p>
+						</div>
+					))}
 					
 					<!-- Second set for seamless looping -->
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">JavaScript</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">TypeScript</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">React</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Next.js</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Astro</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Tailwind CSS</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Node.js</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">PostgreSQL</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">MongoDB</p>
-					</div>
-					<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
-						<p class="text-sm font-medium text-gray-900 dark:text-white">Docker</p>
-					</div>
+					{techStack.map((tech) => (
+						<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
+							<p class="text-sm font-medium text-gray-900 dark:text-white">{tech}</p>
+						</div>
+					))}					
 				</div>
 			</div>
 		</section>
