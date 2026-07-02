@@ -1,20 +1,20 @@
 {
     "about": {
         "name": {
-            "en": "Javier Castillo",
-            "jp": "Javier Castillo"
+            "en": "YiHo Chen",
+            "jp": "チェン　イーホ"
         },
         "description": {
-            "en": "Technologist in Information Systems and Full Stack Developer with more than 2 years of experience, specialized in creating modern, scalable and user-centered solutions.",
-            "jp": "Tecnólogo en Sistemas de Información y Desarrollador Full Stack con más de 2 años de experiencia, especializado en la creación de soluciones modernas, escalables y centradas en el usuario."
+            "en": "Game Developer with about 2 years of experience, specialized in create gameplay systems, architecture design, and development tools.",
+            "jp": "ゲーム開発者で、約2年間の経験があり、ゲームプレイシステム、アーキテクチャ設計、開発ツールの作成に特化しています。"
         },
         "roleTitle": {
-            "en": "Full Stack Developer",
-            "jp": "Desarrollador Full Stack"
+            "en": "Game Developer",
+            "jp": "ゲーム開発者"
         },
         "aboutDesc": {
-            "en": "I am a Full Stack Developer with experience building end-to-end web applications, from architecture design to implementation and deployment. I work integrating APIs, databases, and modern services, with a focus on performance, maintainability, and user experience. I adapt well to collaborative teams, follow development best practices, and aim to deliver stable solutions that bring real business value. I am interested in remote or hybrid opportunities where I can continue growing professionally and contribute to well-structured projects.",
-            "jp": "Soy un Desarrollador Full Stack con experiencia en la construcción de aplicaciones web de extremo a extremo, desde el diseño de arquitectura hasta la implementación y despliegue. Trabajo integrando APIs, bases de datos y servicios modernos, con un enfoque en el rendimiento, la mantenibilidad y la experiencia del usuario. Me adapto bien a equipos colaborativos, sigo las mejores prácticas de desarrollo y busco entregar soluciones estables que aporten un valor real al negocio. Estoy interesado en oportunidades remotas o híbridas donde pueda seguir creciendo profesionalmente y contribuir a proyectos bien estructurados."
+            "en": "I am a Unity gameplay/client programmer with experience developing commercial games. I enjoy designing and implementing gameplay systems, AI, UI, and development tools while keeping scalability, maintainability, and performance in mind.\n Beyond feature implementation, I like understanding how complex systems work, organizing their architecture, and finding practical solutions that improve both the player experience and the development workflow. I have contributed to performance optimization, editor tooling, and reusable systems that help teams build games more efficiently.\n I thrive in collaborative, international development environments and enjoy learning new technologies that can make games more polished, scalable, and enjoyable for players.",
+            "jp": "私は商用ゲームの開発経験を持つUnityのゲームプレイ/クライアントプログラマーです。スケーラビリティ、保守性、パフォーマンスを考慮しながら、ゲームプレイシステム、AI、UI、開発ツールの設計と実装を楽しんでいます。\n 機能の実装だけでなく、複雑なシステムがどのように機能するかを理解し、そのアーキテクチャを整理し、プレイヤー体験と開発ワークフローの両方を改善する実用的なソリューションを見つけることが好きです。パフォーマンスの最適化、エディタツールの作成、チームがより効率的にゲームを構築できる再利用可能なシステムに貢献してきました。\n 私は協力的で国際的な開発環境で活躍し、ゲームをより洗練され、スケーラブルで、プレイヤーにとって楽しいものにする新しい技術を学ぶことを楽しんでいます。"
         }
     },
     "techStack": [

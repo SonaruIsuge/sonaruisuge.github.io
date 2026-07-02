@@ -3,13 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import heroPhoto from "../assets/photo.jpeg";
-import cvFile from "../assets/CV/CV_Javier_Castillo.pdf";
+import cvFile from "../assets/CV/CV_YiHo_Chen_2026.pdf";
 
 import translation from "../data/translation.json";
 import aboutData from "../data/about.json";
 ---
 
-<Layout title={`Home | Javier Castillo`}>
+<Layout title={`Home | Yi Ho Chen - Portfolio`}>
 	<Header />
 
 	<main class="min-h-screen px-4 sm:px-6 md:px-6">
@@ -106,7 +106,7 @@ import aboutData from "../data/about.json";
 								</div>
 								<a
 									href={cvFile}
-									download="CV_Javier_Castillo.pdf"
+									download="CV_Yiho_Chen.pdf"
 									class="cv-download-button"
 									data-en={translation.about.downloadCv.en}
 									data-jp={translation.about.downloadCv.jp}
@@ -160,11 +160,11 @@ import aboutData from "../data/about.json";
 				{translation.about.aboutMe.en}
 			</h2>
 			<div
-				class="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400"
-				data-en={aboutData.about.description.en}
-				data-jp={aboutData.about.description.jp}
+				class="space-y-3 sm:space-y-4 text-base sm:text-lg leading-relaxed text-gray-600 dark:text-gray-400 whitespace-pre-line"
+				data-en={aboutData.about.aboutDesc.en}
+				data-jp={aboutData.about.aboutDesc.jp}
 			>
-				{aboutData.about.description.en}
+				{aboutData.about.aboutDesc.en}
 			</div>
 		</section>
 

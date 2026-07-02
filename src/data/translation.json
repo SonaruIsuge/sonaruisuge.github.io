@@ -2,85 +2,85 @@
     "about": {
         "greeting": {
             "en": "Hello, I'm",
-            "jp": "Hola, soy"
+            "jp": "こんにちは、私は"
         },
         "availability": {
             "en": "Open to work",
-            "jp": "Disponible para trabajar"
+            "jp": "お仕事募集中"
         },
         "viewProjects": {
             "en": "View Projects",
-            "jp": "Ver Proyectos"
+            "jp": "プロジェクトを見る"
         },
         "getInTouch": {
             "en": "Get In Touch",
-            "jp": "Contactar"
+            "jp": "お問い合わせ"
         },
         "downloadCv": {
             "en": "Download CV",
-            "jp": "Descargar CV"
+            "jp": "CVをダウンロード"
         },
         "aboutMe": {
             "en": "About Me",
-            "jp": "Sobre Mí"
+            "jp": "私について"
         },
         "tech": {
             "en": "Tech Stack",
-            "jp": "Tecnológica"
+            "jp": "技術スタック"
         }
     },
     "projects": {
         "subtitle": {
             "en": "Selected Work",
-            "jp": "Trabajos Seleccionados"
+            "jp": "選りすぐりの作品"
         },
         "title": {
             "en": "Projects",
-            "jp": "Proyectos"
+            "jp": "プロジェクト"
         },
         "description": {
-            "en": "A collection of projects showcasing my skills in full-stack development.",
-            "jp": "Una colección de proyectos que muestran mis habilidades en desarrollo full-stack."
+            "en": "A collection of projects showcasing my skills.",
+            "jp": "スキルを詰め込んだプロジェクト集です。"
         }
     },
     "work": {
         "subtitle": {
             "en": "My Journey",
-            "jp": "Mi Trayectoria"
+            "jp": "これまでの歩み"
         },
         "title": {
             "en": "Work Experience",
-            "jp": "Experiencia Laboral"
+            "jp": "職務経歴"
         },
         "description": {
             "en": "A timeline of my professional journey and achievements.",
-            "jp": "Una línea de tiempo de mi trayectoria profesional y logros."
+            "jp": "これまでのキャリアと実績をたどる軌跡です。"
         }
     },
     "contact": {
         "getInTouch": {
             "en": "Get in Touch",
-            "jp": "Contactar"
+            "jp": "お問い合わせ"
         },
         "letConnect": {
             "en": "Let's Connect",
-            "jp": "Conectemos"
+            "jp": "つながりましょう"
         },
         "description": {
             "en": "Have a project in mind or want to collaborate? I'd love to hear from you.",
-            "jp": "¿Tienes un proyecto en mente o quieres colaborar? Me encantaría saber de ti."
+            "jp": "ご相談したいプロジェクトやコラボのご希望はありますか？ぜひお気軽にご連絡ください。"
         },
         "connectElsewhere": {
             "en": "Connect Elsewhere",
-            "jp": "Conéctate en otros lugares"
+            "jp": "各種SNSでつながる"
         },
         "description2": {
-            "en": "Feel free to reach out through any of these platforms. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.",
-            "jp": "Siéntete libre de contactarme a través de cualquiera de estas plataformas. Siempre estoy abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ser parte de tus visiones."
+            "en": "Feel free to reach out through any of these platforms.",
+            "jp": "以下のいずれのプラットフォームからでもお気軽にご連絡ください。"
         },
         "contactInfo": {
             "en": "Contact Info",
-            "jp": "Información de Contacto"
+            "jp": "連絡先"
         }
     }
 }
