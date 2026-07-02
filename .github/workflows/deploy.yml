@@ -8,6 +8,10 @@ on:
   # Te permite ejecutar este flujo de trabajo manualmente desde la pestaña Acciones en GitHub.
   workflow_dispatch:
 
+concurrency:
+  group: pages
+  cancel-in-progress: true   # 新的 push 自動取消舊的
+
 # Permite que este trabajo clone el repositorio y cree un despliegue de página
 permissions:
   contents: read
