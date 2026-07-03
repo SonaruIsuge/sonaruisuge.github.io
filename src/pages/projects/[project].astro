@@ -1,165 +1,278 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
+import { marked } from "marked";
+
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+import translations from "../../data/translation.json";
 
 export async function getStaticPaths() {
-    const jpDescriptions = import.meta.glob('../../project-descriptions/*/descripcion.md', { query: '?raw', import: 'default' });
-    
-    return Object.keys(jpDescriptions).map(path => {
-        const parts = path.split('/');
-        const folder = parts[parts.length - 2];
-        return {
-            params: { project: folder }
-        };
-    });
+	const jpDescriptions = import.meta.glob(
+		"../../project-descriptions/*/descripcion.md",
+		{ query: "?raw", import: "default" },
+	);
+
+	return Object.keys(jpDescriptions).map((path) => {
+		const parts = path.split("/");
+		const folder = parts[parts.length - 2];
+		return {
+			params: { project: folder },
+		};
+	});
 }
 
 const { project } = Astro.params;
 
 // Load descriptions from the new location
-const jpDescriptions = import.meta.glob('../../project-descriptions/*/descripcion.md', { query: '?raw', import: 'default' });
-const enDescriptions = import.meta.glob('../../project-descriptions/*/descripcion.en.md', { query: '?raw', import: 'default' });
+const jpDescriptions = import.meta.glob(
+	"../../project-descriptions/*/descripcion.md",
+	{ query: "?raw", import: "default" },
+);
+const enDescriptions = import.meta.glob(
+	"../../project-descriptions/*/descripcion.en.md",
+	{ query: "?raw", import: "default" },
+);
 
-const jpContent = await jpDescriptions[`../../project-descriptions/${project}/descripcion.md`]() as string;
-const enContent = await enDescriptions[`../../project-descriptions/${project}/descripcion.en.md`]() as string;
+const jpContent = (await jpDescriptions[
+	`../../project-descriptions/${project}/descripcion.md`
+]()) as string;
+const enContent = (await enDescriptions[
+	`../../project-descriptions/${project}/descripcion.en.md`
+]()) as string;
 
 // Load images
-const allImages = import.meta.glob('../../assets/*/*.{png,jpg,jpeg,webp}', { eager: true });
+const allImages = import.meta.glob("../../assets/*/*.{png,jpg,jpeg,webp}", {
+	eager: true,
+});
 const projectImages = Object.keys(allImages)
-    .filter(path => path.includes(`/${project}/`))
-    .map(path => (allImages[path] as any).default.src);
-
-const translations = {
-    backToProjects: { en: '← Back to Projects', jp: '← Volver a Proyectos' },
-    gallery: { en: 'Gallery', jp: 'Galería' },
-    stack: { en: 'Technologies', jp: 'Tecnologías' },
-    links: { en: 'Links', jp: 'Enlaces' },
-    inDevelopment: { en: 'In Development', jp: 'En desarrollo' },
-    customSoftware: { en: 'Custom Software', jp: 'Software a medida' }
-};
+	.filter((path) => path.includes(`/${project}/`))
+	.map((path) => (allImages[path] as any).default.src);
 
 function parseProjectData(content: string) {
-    const lines = content.split('\n');
-    const title = lines[0].replace(/# /g, '').trim();
-    const summary = lines[1].trim();
-    
-    const stackIndex = lines.findIndex(l => l.includes('## Stack'));
-    const linksIndex = lines.findIndex(l => l.includes('## Links'));
-    
-    const stack = stackIndex !== -1 ? lines[stackIndex + 1].split(',').map(s => s.trim()) : [];
-    const linksRaw = linksIndex !== -1 ? lines.slice(linksIndex + 1).filter(l => l.trim()) : [];
-    
-    const links = linksRaw.map(l => {
-        const match = l.match(/\[(.*)\]\((.*)\)/);
-        if (match) return { label: match[1], url: match[2] };
-        return { label: l.trim(), url: null };
-    });
+	const lines = content.split("\n");
+	const title = lines[0].replace(/^#+\s*/, "").trim();
 
-    return { title, summary, stack, links };
+	const stackIndex = lines.findIndex((l) => /^##\s+Stack/.test(l.trim()));
+	const linksIndex = lines.findIndex((l) => /^##\s+Links/.test(l.trim()));
+
+	// Body: everything after the title line, up to ## Stack
+	const bodyEnd = stackIndex !== -1 ? stackIndex : linksIndex !== -1 ? linksIndex : lines.length;
+
+	// Let marked handle breaks
+	const body = lines.slice(1, bodyEnd).join("\n\n").trim();
+
+	const stack =
+		stackIndex !== -1
+			? lines[stackIndex + 1].split(",").map((s) => s.trim())
+			: [];
+	const linksRaw =
+		linksIndex !== -1
+			? lines.slice(linksIndex + 1).filter((l) => l.trim())
+			: [];
+
+	const links = linksRaw.map((l) => {
+		const match = l.match(/\[(.*?)\]\((.*?)\)/);
+		if (match) return { label: match[1], url: match[2] };
+		return { label: l.trim(), url: null };
+	});
+
+	return { title, body, stack, links };
 }
 
 const jpData = parseProjectData(jpContent);
 const enData = parseProjectData(enContent);
+const jpBodyHtml = await marked(jpData.body, { breaks: true });
+const enBodyHtml = await marked(enData.body, { breaks: true });
 ---
 
-<Layout title={`${project} | Javier Castillo`}>
+<Layout title={`${project} | Yi-Ho Chen - Portfolio`}>
 	<Header />
-	
+
 	<main class="min-h-screen px-4 sm:px-6 md:px-6">
-		<article class="max-w-3xl mx-auto pt-24 sm:pt-32 md:pt-48 pb-16 sm:pb-24 fade-in">
-			<a href="/projects" class="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors mb-8 inline-block" data-en={translations.backToProjects.en} data-jp={translations.backToProjects.jp}>
-				{translations.backToProjects.en}
+		<article
+			class="max-w-3xl mx-auto pt-24 sm:pt-32 md:pt-48 pb-16 sm:pb-24 fade-in"
+		>
+			<a
+				href="/projects"
+				class="text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors mb-8 inline-block"
+				data-en={translations.projectPage.backToProjects.en}
+				data-jp={translations.projectPage.backToProjects.jp}
+			>
+				{translations.projectPage.backToProjects.en}
 			</a>
 
 			<header class="mb-12">
-				<h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+				<h1
+					class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6"
+				>
 					<span class="locale-jp">{jpData.title}</span>
 					<span class="locale-en">{enData.title}</span>
-				</h1>
-				<p class="text-lg text-gray-600 dark:text-gray-400">
-					<span class="locale-jp">{jpData.summary}</span>
-					<span class="locale-en">{enData.summary}</span>
-				</p>
+				</h1>				
 			</header>
 
 			<div class="space-y-12">
 				<!-- Stack -->
 				<section>
-					<h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4" data-en={translations.stack.en} data-jp={translations.stack.jp}>
-						{translations.stack.en}
+					<h2
+						class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4"
+						data-en={translations.projectPage.stack.en}
+						data-jp={translations.projectPage.stack.jp}
+					>
+						{translations.projectPage.stack.en}
 					</h2>
 					<div class="flex flex-wrap gap-2">
-						{jpData.stack.map((tech) => (
-							<span class="px-3 py-1 text-sm font-medium rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-transparent hover:border-gray-300 dark:hover:border-gray-600 hover:animated-bg transition-all duration-300 cursor-default">
-								{tech}
-							</span>
-						))}
+						{
+							jpData.stack.map((tech) => (
+								<span class="px-3 py-1 text-sm font-medium rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-transparent hover:border-gray-300 dark:hover:border-gray-600 hover:animated-bg transition-all duration-300 cursor-default">
+									{tech}
+								</span>
+							))
+						}
 					</div>
 				</section>
 
-				<!-- Links -->
-				{jpData.links.length > 0 && jpData.links[0].label !== 'Privado' && jpData.links[0].label !== 'Private' && (
-					<section>
-						<h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4" data-en={translations.links.en} data-jp={translations.links.jp}>
-							{translations.links.en}
-						</h2>
-						<div class="flex flex-wrap gap-4">
-							{jpData.links.map((link, i) => (
-								link.url ? (
-									<a href={link.url} target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center gap-1">
-										<span class="locale-jp">{link.label}</span>
-										<span class="locale-en">{enData.links[i]?.label || link.label}</span>
-										<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-										</svg>
-									</a>
-								) : (
-									<span class="text-sm font-medium text-gray-500">
-										<span class="locale-jp">{link.label}</span>
-										<span class="locale-en">{enData.links[i]?.label || link.label}</span>
-									</span>
-								)
-							))}
-						</div>
-					</section>
-				)}
+				<div class="locale-jp prose prose-gray dark:prose-invert max-w-none" set:html={jpBodyHtml} />
+				<div class="locale-en prose prose-gray dark:prose-invert max-w-none" set:html={enBodyHtml} />
 
-				<!-- Gallery -->
-				{projectImages.length > 0 && (
-					<section>
-						<h2 class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-6" data-en={translations.gallery.en} data-jp={translations.gallery.jp}>
-							{translations.gallery.en}
-						</h2>
-						<div class="grid grid-cols-1 gap-8">
-							{projectImages.map((src, i) => (
-								<div class="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50">
-									<img src={src} alt={`Project screenshot`} class="w-full h-auto" loading="lazy" />
-									
-									{/* Status Badges */}
-									{i === 0 && (project === 'HeyFood' || project === 'MINIPOS') && (
-										<div class="absolute top-4 left-4">
-											<div class="px-3 py-1.5 rounded-full bg-black/60 dark:bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white">
-												{project === 'HeyFood' && (
-													<>
-														<span class="locale-jp">{translations.inDevelopment.jp}</span>
-														<span class="locale-en">{translations.inDevelopment.en}</span>
-													</>
-												)}
-												{project === 'MINIPOS' && (
-													<>
-														<span class="locale-jp">{translations.customSoftware.jp}</span>
-														<span class="locale-en">{translations.customSoftware.en}</span>
-													</>
-												)}
-											</div>
-										</div>
+				<!-- Links -->
+				{
+					jpData.links.length > 0 &&
+						jpData.links[0].label !== "Privado" &&
+						jpData.links[0].label !== "Private" && (
+							<section>
+								<h2
+									class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4"
+									data-en={translations.projectPage.links.en}
+									data-jp={translations.projectPage.links.jp}
+								>
+									{translations.projectPage.links.en}
+								</h2>
+								<div class="flex flex-wrap gap-4">
+									{jpData.links.map((link, i) =>
+										link.url ? (
+											<a
+												href={link.url}
+												target="_blank"
+												rel="noopener noreferrer"
+												class="text-sm font-medium text-gray-900 dark:text-white hover:text-primary transition-colors flex items-center gap-1"
+											>
+												<span class="locale-jp">
+													{link.label}
+												</span>
+												<span class="locale-en">
+													{enData.links[i]?.label ||
+														link.label}
+												</span>
+												<svg
+													class="w-3 h-3"
+													fill="none"
+													stroke="currentColor"
+													viewBox="0 0 24 24"
+												>
+													<path
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														stroke-width="2"
+														d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+													/>
+												</svg>
+											</a>
+										) : (
+											<span class="text-sm font-medium text-gray-500">
+												<span class="locale-jp">
+													{link.label}
+												</span>
+												<span class="locale-en">
+													{enData.links[i]?.label ||
+														link.label}
+												</span>
+											</span>
+										),
 									)}
 								</div>
-							))}
-						</div>
-					</section>
-				)}
+							</section>
+						)
+				}
+
+				<!-- Gallery -->
+				{
+					projectImages.length > 0 && (
+						<section>
+							<h2
+								class="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-6"
+								data-en={translations.projectPage.gallery.en}
+								data-jp={translations.projectPage.gallery.jp}
+							>
+								{translations.projectPage.gallery.en}
+							</h2>
+							<div class="grid grid-cols-1 gap-8">
+								{projectImages.map((src, i) => (
+									<div class="relative rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/50">
+										<img
+											src={src}
+											alt={`Project screenshot`}
+											class="w-full h-auto"
+											loading="lazy"
+										/>
+
+										{/* Status Badges */}
+										{i === 0 &&
+											(project === "HeyFood" ||
+												project === "MINIPOS") && (
+												<div class="absolute top-4 left-4">
+													<div class="px-3 py-1.5 rounded-full bg-black/60 dark:bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white">
+														{project ===
+															"HeyFood" && (
+															<>
+																<span class="locale-jp">
+																	{
+																		translations
+																			.projectPage
+																			.inDevelopment
+																			.jp
+																	}
+																</span>
+																<span class="locale-en">
+																	{
+																		translations
+																			.projectPage
+																			.inDevelopment
+																			.en
+																	}
+																</span>
+															</>
+														)}
+														{project ===
+															"MINIPOS" && (
+															<>
+																<span class="locale-jp">
+																	{
+																		translations
+																			.projectPage
+																			.customSoftware
+																			.jp
+																	}
+																</span>
+																<span class="locale-en">
+																	{
+																		translations
+																			.projectPage
+																			.customSoftware
+																			.en
+																	}
+																</span>
+															</>
+														)}
+													</div>
+												</div>
+											)}
+									</div>
+								))}
+							</div>
+						</section>
+					)
+				}
 			</div>
 		</article>
 	</main>
@@ -167,8 +280,8 @@ const enData = parseProjectData(enContent);
 	<Footer />
 
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			document.querySelector('.fade-in')?.classList.add('visible');
+		document.addEventListener("DOMContentLoaded", () => {
+			document.querySelector(".fade-in")?.classList.add("visible");
 		});
 	</script>
 </Layout>

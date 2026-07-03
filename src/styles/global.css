@@ -44,9 +44,11 @@ html[data-lang="en"] .locale-jp {
 	0% {
 		background-position: 0% 50%;
 	}
+
 	50% {
 		background-position: 100% 50%;
 	}
+
 	100% {
 		background-position: 0% 50%;
 	}
@@ -95,6 +97,7 @@ html[data-lang="en"] .locale-jp {
 	0% {
 		transform: translateX(0);
 	}
+
 	100% {
 		transform: translateX(-50%);
 	}
@@ -122,6 +125,7 @@ html[data-lang="en"] .locale-jp {
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -131,6 +135,7 @@ html[data-lang="en"] .locale-jp {
 	0% {
 		opacity: 1;
 	}
+
 	100% {
 		opacity: 0;
 	}
@@ -265,4 +270,28 @@ html.dark .cv-download-card {
 		transform: rotate(0deg);
 		width: 100%;
 	}
+}
+
+.prose h2 {
+	@apply text-2xl font-bold text-gray-900 dark:text-white mt-10 mb-4;
+}
+
+.prose h3 {
+	@apply text-lg font-semibold text-gray-800 dark:text-gray-200 mt-6 mb-2;
+}
+
+.prose p {
+	@apply text-gray-600 dark:text-gray-400 leading-relaxed mb-4;
+}
+
+.prose ul {
+	@apply list-disc list-inside text-gray-600 dark:text-gray-400 space-y-1 mb-4;
+}
+
+.prose a {
+	@apply text-blue-600 dark:text-blue-400 underline;
+}
+
+.prose strong {
+	@apply font-semibold text-gray-900 dark:text-white;
 }

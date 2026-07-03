@@ -41,6 +41,10 @@
         "description": {
             "en": "A collection of projects showcasing my skills.",
             "jp": "スキルを詰め込んだプロジェクト集です。"
+        },
+        "viewProject": {
+            "en": "View Project",
+            "jp": "プロジェクトを見る"
         }
     },
     "work": {
@@ -81,6 +85,33 @@
         "contactInfo": {
             "en": "Contact Info",
             "jp": "連絡先"
+        }
+    },
+
+    "projectPage": {
+        "backToProjects": {
+            "en": "← Back to Projects",
+            "jp": "← プロジェクト一覧に戻る"
+        },
+        "gallery": {
+            "en": "Gallery",
+            "jp": "ギャラリー"
+        },
+        "stack": {
+            "en": "Technologies",
+            "jp": "技術"
+        },
+        "links": {
+            "en": "Links",
+            "jp": "リンク"
+        },
+        "inDevelopment": {
+            "en": "In Development",
+            "jp": "開発中"
+        },
+        "customSoftware": {
+            "en": "Custom Software",
+            "jp": "カスタムソフトウェア"
         }
     }
 }
