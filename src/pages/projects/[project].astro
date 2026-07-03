@@ -45,8 +45,15 @@ const enContent = (await enDescriptions[
 const allImages = import.meta.glob("../../assets/*/*.{png,jpg,jpeg,webp}", {
 	eager: true,
 });
+
+const titleImage = Object.keys(allImages)
+	.filter((path) => path.includes(`/${project}/`) && /\/title\.(png|jpg|jpeg|webp)$/.test(path))
+	.map((path) => (allImages[path] as any).default.src)[0];
+
+// Exclude title image from gallery
 const projectImages = Object.keys(allImages)
 	.filter((path) => path.includes(`/${project}/`))
+	.filter((path) => !/\/title\.(png|jpg|jpeg|webp)$/.test(path))
 	.map((path) => (allImages[path] as any).default.src);
 
 function parseProjectData(content: string) {
@@ -110,7 +117,15 @@ const enBodyHtml = await marked(enData.body, { breaks: true });
 					<span class="locale-en">{enData.title}</span>
 				</h1>				
 			</header>
-
+			{titleImage && (
+			<div class="mb-12 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-800">
+				<img
+					src={titleImage}
+					alt={`${project} title`}
+					class="w-full h-auto"
+				/>
+			</div>
+			)}
 			<div class="space-y-12">
 				<!-- Stack -->
 				<section>
@@ -214,59 +229,7 @@ const enBodyHtml = await marked(enData.body, { breaks: true });
 											alt={`Project screenshot`}
 											class="w-full h-auto"
 											loading="lazy"
-										/>
-
-										{/* Status Badges */}
-										{i === 0 &&
-											(project === "HeyFood" ||
-												project === "MINIPOS") && (
-												<div class="absolute top-4 left-4">
-													<div class="px-3 py-1.5 rounded-full bg-black/60 dark:bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white">
-														{project ===
-															"HeyFood" && (
-															<>
-																<span class="locale-jp">
-																	{
-																		translations
-																			.projectPage
-																			.inDevelopment
-																			.jp
-																	}
-																</span>
-																<span class="locale-en">
-																	{
-																		translations
-																			.projectPage
-																			.inDevelopment
-																			.en
-																	}
-																</span>
-															</>
-														)}
-														{project ===
-															"MINIPOS" && (
-															<>
-																<span class="locale-jp">
-																	{
-																		translations
-																			.projectPage
-																			.customSoftware
-																			.jp
-																	}
-																</span>
-																<span class="locale-en">
-																	{
-																		translations
-																			.projectPage
-																			.customSoftware
-																			.en
-																	}
-																</span>
-															</>
-														)}
-													</div>
-												</div>
-											)}
+										/>									
 									</div>
 								))}
 							</div>
