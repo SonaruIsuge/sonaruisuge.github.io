@@ -2,7 +2,7 @@
 
 A modern, responsive, bilingual portfolio website built with **Astro** and **Tailwind CSS**. It presents professional experience, skills, projects, and contact information for Yiho Chen.
 
-> **Fork notice:** This project was forked from [JavierDvlpr/portfolio](https://github.com/JavierDvlpr/portfolio) and customized for Yiho Chen.
+> **Fork notice:** This project was forked from [JavierDvlpr/portfolio](https://github.com/JavierDvlpr/javierdvlpr.github.io) and customized for Yiho Chen.
 
 ## Features
 
