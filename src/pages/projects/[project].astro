@@ -67,7 +67,7 @@ function parseProjectData(content: string) {
 	const bodyEnd = stackIndex !== -1 ? stackIndex : linksIndex !== -1 ? linksIndex : lines.length;
 
 	// Let marked handle breaks
-	const body = lines.slice(1, bodyEnd).join("\n\n").trim();
+	const body = lines.slice(1, bodyEnd).join("\n").trim();
 
 	const stack =
 		stackIndex !== -1
