@@ -60,6 +60,9 @@ This significantly improved both presentation and user experience.
 ## Stack
 Unity, C#, Input System, Cinemachine, DOTween, Async/Await, Interface-based Architecture, Unity Physics, Event-driven Design, Git
 
+## Period
+Feb 2023 - April 2023
+
 ## Links
 [Repo](https://github.com/SonaruIsuge/ProjectSpace/tree/develop)
 [Video](https://www.youtube.com/watch?v=4CMfkhOZMS4)

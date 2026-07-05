@@ -93,5 +93,8 @@ Seeing a small tool become part of everyone's daily workflow was especially rewa
 ## Stack
 Unity, C#, GPU Instancing, Addressables, Input System, ScriptableObject, Custom Editor, Object Pooling, Design Pattern, Regular Expression, Performance Optimization, Git, Jenkins
 
+## Period
+Jan 2024 - Jan 2025
+
 ## Links
 [Steam Page](https://store.steampowered.com/app/3844290/Twin_Soul/)

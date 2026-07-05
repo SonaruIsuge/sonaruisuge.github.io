@@ -49,6 +49,8 @@ Death Game Hotel は、プレイヤーが財産だけでなく身体の一部ま
 ## Stack
 Unity, C#, VR, Photon Fusion, TextMeshPro, Addressables, ScriptableObject, GitLab
 
+## Period
+2023年4月 - 2023年7月
 
 ## Links
 [Trailer](https://www.youtube.com/watch?v=RVi0f6ZA8n8)

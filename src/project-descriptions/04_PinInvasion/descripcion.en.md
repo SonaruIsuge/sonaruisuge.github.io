@@ -7,7 +7,7 @@ Pin Invasion is an experimental game that combines classic pinball mechanics wit
 --- 
 <br>
 
-Unlike the previous commercial projects I worked on, Pin Invasion started as an internal prototype where the team explored different gameplay ideas from scratch. After numerous design discussions, we decided to expand the concept into a hybrid of pinball and survival defense.
+Unlike the previous commercial projects I worked on, Pin Invasion starte d as an internal prototype where the team explored different gameplay ideas from scratch. After numerous design discussions, we decided to expand the concept into a hybrid of pinball and survival defense.
 
 Because the team was relatively small, I was responsible for designing and implementing many of the game's core systems. This project gave me the opportunity to think beyond individual features and instead focus on building a scalable architecture that would support rapid iteration throughout development.
 
@@ -47,6 +47,9 @@ This architecture made it straightforward to introduce new upgrades and abilitie
 
 ## Stack
 Unity, C#, State Machine, Event System, ScriptableObject, UniTask, Object Pooling, Design Patterns, Git
+
+## Period
+Feb 2025 - Jun 2025
 
 ## Links
 Private

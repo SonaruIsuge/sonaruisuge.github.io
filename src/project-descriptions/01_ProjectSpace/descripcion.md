@@ -54,6 +54,9 @@ Project Space は、インターン期間中にデザイナー担当のインタ
 ## Stack
 Unity, C#, Input System, Cinemachine, DOTween, Async/Await, Interface-based Architecture, Unity Physics, Event-driven Design, Git
 
+## Period
+2023年2月 - 2023年4月
+
 ## Links
 [Repo](https://github.com/SonaruIsuge/ProjectSpace/tree/develop)
 [Video](https://www.youtube.com/watch?v=4CMfkhOZMS4)
