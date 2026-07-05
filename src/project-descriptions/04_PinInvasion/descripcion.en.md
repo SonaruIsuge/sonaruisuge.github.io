@@ -51,5 +51,11 @@ Unity, C#, State Machine, Event System, ScriptableObject, UniTask, Object Poolin
 ## Period
 Feb 2025 - Jun 2025
 
+## Platform
+Windows, Mobile
+
+## Type
+Company Project
+
 ## Links
 Private

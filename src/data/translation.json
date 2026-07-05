@@ -45,6 +45,14 @@
         "viewProject": {
             "en": "View Project",
             "jp": "プロジェクトを見る"
+        },
+        "companyProject": {
+            "en": "Company Project",
+            "jp": "会社プロジェクト"
+        },
+        "sideProject": {
+            "en": "Side Project",
+            "jp": "個人プロジェクト"
         }
     },
     "work": {
@@ -112,6 +120,18 @@
         "customSoftware": {
             "en": "Custom Software",
             "jp": "カスタムソフトウェア"
+        },
+        "platform": {
+            "en": "Platform",
+            "jp": "プラットフォーム"
+        },
+        "type": {
+            "en": "Type",
+            "jp": "タイプ"
+        },
+        "period": {
+            "en": "Period",
+            "jp": "期間"
         }
     }
 }

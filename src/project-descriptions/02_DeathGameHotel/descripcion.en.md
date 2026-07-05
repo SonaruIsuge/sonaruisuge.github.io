@@ -51,6 +51,12 @@ Unity, C#, VR, Photon Fusion, TextMeshPro, Addressables, ScriptableObject, GitLa
 ## Period
 Apr 2023 - Jul 2023
 
+## Platform
+Windows, Meta Quest
+
+## Type
+Company Project
+
 ## Links
 [Trailer](https://www.youtube.com/watch?v=RVi0f6ZA8n8)
 [Game Page](https://www.meta.com/ja-jp/experiences/death-game-hotel-a-white-owls-game/7371422382882960/)

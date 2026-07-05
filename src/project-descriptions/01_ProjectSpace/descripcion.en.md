@@ -63,6 +63,12 @@ Unity, C#, Input System, Cinemachine, DOTween, Async/Await, Interface-based Arch
 ## Period
 Feb 2023 - April 2023
 
+## Platform
+Windows
+
+## Type
+Company Project
+
 ## Links
 [Repo](https://github.com/SonaruIsuge/ProjectSpace/tree/develop)
 [Video](https://www.youtube.com/watch?v=4CMfkhOZMS4)

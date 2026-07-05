@@ -91,10 +91,16 @@ Although technically simple, it became one of the team's most frequently used ed
 Seeing a small tool become part of everyone's daily workflow was especially rewarding because it demonstrated that improving developer experience can be just as valuable as implementing gameplay features.
 
 ## Stack
-Unity, C#, GPU Instancing, Addressables, Input System, ScriptableObject, Custom Editor, Object Pooling, Design Pattern, Regular Expression, Performance Optimization, Git, Jenkins
+Unity, C#, GPU Instancing, Addressables, Input System, ScriptableObject, Custom Editor, Object Pooling, Design Pattern, Regular Expression, Performance Optimization, Git
 
 ## Period
 Jan 2024 - Jan 2025
+
+## Platform
+Windows
+
+## Type
+Company Project
 
 ## Links
 [Steam Page](https://store.steampowered.com/app/3844290/Twin_Soul/)
