@@ -13,6 +13,8 @@ This project was unique because it was developed collaboratively with another ga
 
 ### Understanding a Large Existing Architecture
 
+> **Tackled a heavily abstracted partner-studio codebase by mapping one subsystem at a time with architecture diagrams, quickly reaching the point where I could ship production features.**
+
 The biggest challenge when joining the project was its complexity. Because the partner studio had developed its own framework and workflow, many systems were heavily abstracted and layered, making the overall architecture difficult to understand.
 
 Rather than reading files one by one, I focused on understanding one subsystem at a time. I created architecture diagrams to visualize class relationships, data flow, and dependencies between systems.
@@ -20,6 +22,8 @@ Rather than reading files one by one, I focused on understanding one subsystem a
 This approach allowed me to identify how each subsystem interacted with the others and significantly shortened the time required before I could begin implementing production features.
 
 ### Vegetation System
+
+> **Built a designer-facing procedural vegetation tool, then eliminated the resulting draw-call bottleneck with GPU Instancing (DrawMeshInstanced).**
 
 One of my largest responsibilities was developing a vegetation system for level designers.
 
@@ -35,6 +39,8 @@ This dramatically reduced draw calls and solved the performance bottleneck while
 
 ### Key Configuration System
 
+> **Implemented keyboard/gamepad rebinding by leveraging Unity Input System's built-in features and focusing on save data, UI, and interaction flow.**
+
 I implemented the game's key rebinding system for both keyboard and gamepad.
 
 Although this was my first time developing a key configuration feature, Unity's Input System already provided built-in support for rebinding and conflict detection. Instead of reinventing those features, I focused on designing the surrounding systems, including persistent save data, UI updates, and user interaction flow.
@@ -42,6 +48,8 @@ Although this was my first time developing a key configuration feature, Unity's 
 This experience reinforced the importance of understanding existing frameworks before implementing custom solutions.
 
 ### Localized Texture System
+
+> **Designed a modular, Addressables-based localization system with Observer-pattern auto-updates and a custom editor window to centralize texture management.**
 
 During development, the project required different textures for multiple languages and platforms.
 
@@ -61,6 +69,8 @@ This significantly improved productivity and reduced configuration mistakes.
 
 ### Enemy AI Development
 
+> **Analyzed and extended an undocumented enemy framework, refactoring duplicated base-class logic into reusable abstractions to simplify future enemy creation.**
+
 I implemented several enemy types based on the project's existing enemy framework.
 
 Since no architecture documentation was available, I first analyzed the base enemy implementation to understand component responsibilities and inheritance relationships before extending the system.
@@ -70,6 +80,8 @@ During development, I noticed duplicated functionality across multiple base clas
 This task helped me become much more comfortable working with large inheritance hierarchies and maintaining complex production code.
 
 ### Developer Tools
+
+> **Built team-wide editor tools — a regex-based batch asset renamer and a Scene View camera-follow overlay — that became daily-use productivity boosters.**
 
 Besides gameplay systems, I actively developed tools that improved the productivity of the entire development team.
 

@@ -15,6 +15,8 @@ Because the team was relatively small, I was responsible for designing and imple
 
 ### Game Flow & Architecture
 
+> **Structured the game with a singleton Game Manager, a State Machine, event-driven communication, and multi-scene loading for a loosely coupled, scalable architecture.**
+
 One of my primary responsibilities was designing the overall game flow.
 
 The game lifecycle was managed through a singleton-based Game Manager, while gameplay progression was organized using a State Machine. Each game state was responsible for its own logic, UI updates, and transitions, allowing systems to remain independent while keeping the overall flow easy to understand.
@@ -27,6 +29,8 @@ Overall, the architecture emphasized maintainability, scalability, and loose cou
 
 ### Enemy & Wave System
 
+> **Designed enemies around composition over inheritance, with object-pooled spawning and data-driven (ScriptableObject + UniTask) waves that can start from any wave for fast testing.**
+
 The enemy framework was designed to prioritize composition over inheritance.
 
 The base enemy class only contained essential behavior and virtual interfaces, while additional functionality was implemented through reusable components. This approach reduced inheritance complexity and made creating new enemy types much faster.
@@ -36,6 +40,8 @@ Enemy spawning was built on an Object Pool, minimizing runtime allocations. Spaw
 Wave progression followed a data-driven approach using ScriptableObjects. Combined with UniTask, the wave controller managed enemy spawning asynchronously and also supported starting the game from any wave, greatly improving debugging and playtesting efficiency.
 
 ### Upgrade System
+
+> **Built a flexible upgrade system with a central manager that dynamically filters valid choices and a shared ability base class, making new upgrades trivial to add.**
 
 The upgrade system was designed around flexibility and future expansion.
 

@@ -299,3 +299,11 @@ html.dark .cv-download-card {
 .prose ol {
 	@apply list-decimal list-inside text-gray-600 dark:text-gray-400 space-y-1 mb-4;
 }
+
+.prose blockquote {
+	@apply border-l-2 border-gray-300 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/40 rounded-r-lg pl-4 pr-4 py-3 my-5;
+}
+
+.prose blockquote p {
+	@apply mb-0 not-italic font-medium text-gray-700 dark:text-gray-300;
+}

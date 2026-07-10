@@ -13,6 +13,8 @@ This project significantly improved my understanding of low-level game programmi
 
 ### Custom Gameplay Runtime
 
+> **Built a minimal game runtime directly on OpenGL — window/context setup, input, resource loading, a deterministic main loop, and a reusable rendering abstraction over VAO/VBO/GLSL.**
+
 The primary goal of this project was to understand what a game engine normally provides behind the scenes by building a minimal gameplay runtime directly on top of OpenGL.
 
 The project is responsible for every stage of execution, including window creation, OpenGL context initialization, input registration, resource loading, rendering, gameplay updates, and shutdown. This explicit control exposes how individual gameplay systems depend on one another during every frame.
@@ -22,6 +24,8 @@ The main game loop follows a deterministic execution order. Each frame processes
 Rendering is implemented using a lightweight abstraction around VAOs, VBOs, and GLSL shader programs. Rather than exposing raw OpenGL calls throughout the codebase, rendering responsibilities are encapsulated inside reusable rendering classes that manage vertex buffers, shader uniforms, transformation matrices, and draw submission. This separation keeps gameplay logic independent from rendering implementation details while making the renderer easier to extend in the future.
 
 ### Object & Component Architecture
+
+> **Combined a lightweight object hierarchy with composable, type-safe components (an ECS-lite approach) to keep class trees shallow and make expansion easy.**
 
 The gameplay framework is built around a lightweight object hierarchy combined with a component-based architecture.
 
@@ -35,6 +39,8 @@ Designing the gameplay framework this way also made future expansion considerabl
 
 ### Projectile Pooling & Collision Management
 
+> **Recycled bullets through a custom Object Pool and centralized collision in dedicated managers to keep frame rate stable under heavy bullet counts.**
+
 Bullet-heavy games frequently create large numbers of short-lived objects, making memory allocation an important consideration.
 
 To avoid repeated heap allocations during gameplay, all projectiles are managed through a custom Object Pool. Instead of constructing and destroying bullets whenever weapons fire, inactive projectiles are recycled and returned to the pool after their lifetime expires.
@@ -47,6 +53,8 @@ Collision detection is centralized within dedicated manager classes using lightw
 
 ### Enemy Wave System & Boss State Machine
 
+> **Managed enemies with a modular wave system and drove the multi-phase boss with an explicit State Machine for readable, easily extensible encounters.**
+
 Enemy progression is organized around a modular wave management system.
 
 Each wave defines its own spawn configuration, enemy composition, spawn timing, and progression conditions. Rather than embedding wave logic inside gameplay code, the level manager coordinates wave progression while allowing individual enemy classes to focus exclusively on movement and attack behavior.
@@ -58,6 +66,8 @@ The boss encounter is implemented using an explicit State Machine instead of a s
 This design greatly improves readability while reducing the complexity typically associated with multi-phase boss encounters. It also makes introducing additional boss phases considerably simpler, as new behaviors can be implemented as independent states rather than modifying existing logic.
 
 ### Data-driven Geometry Pipeline
+
+> **Moved 2D geometry into custom .gd data files so visuals can change without recompiling — cleanly separating content from code.**
 
 Rather than hardcoding geometry directly in C++, the project introduces a lightweight data-driven asset pipeline for simple 2D models.
 

@@ -15,6 +15,8 @@ My responsibilities included developing interactive VR objects, maintaining and 
 
 ### Interactive Objects in a Multiplayer Environment
 
+> **Fixed cross-client synchronization bugs on interactive objects using RPC-based communication in Photon Fusion, deepening my understanding of network authority.**
+
 My initial assignment was to implement several interactive objects used throughout the game.
 
 The core interaction framework had already been established, allowing me to focus on implementing the unique behavior of each object. During development, I encountered synchronization issues where certain interactions were not correctly replicated across clients.
@@ -24,6 +26,8 @@ After studying Photon Fusion's networking model and discussing the problem with 
 Beyond solving the immediate issue, this experience gave me a much deeper understanding of multiplayer synchronization and network authority.
 
 ### Refactoring a Large VR UI System
+
+> **Mapped and refactored a sprawling, multi-author VR UI — cutting duplicate code and removing wasteful cross-system updates to improve both maintainability and rendering performance.**
 
 One of the largest tasks I was assigned was refactoring the project's VR UI system.
 
@@ -36,6 +40,8 @@ During the refactoring process, I also discovered several unnecessary cross-syst
 This project taught me the importance of understanding an existing architecture before attempting to improve it.
 
 ### Optimizing Text Rendering with Dynamic Fonts
+
+> **Switched heavy Japanese TextMeshPro atlases to Dynamic Font Assets, slashing font asset size while keeping visual quality — my first fully self-driven technical investigation shipped in a commercial project.**
 
 Because the game contained a large amount of Japanese text, the generated TextMeshPro font atlases became excessively large, increasing memory usage and build size.
 

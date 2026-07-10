@@ -15,6 +15,8 @@ This project was my first experience participating in a professional game develo
 
 ### Game Design Documentation (GDD, TDD & Estimation)
 
+> **Spent the first week writing the GDD, TDD, and effort estimates before a single line of code — turning documentation into the roadmap that guided the entire two-month build.**
+
 One of the biggest differences from student projects was learning how much preparation happens before development begins.
 
 During the first week, we created a complete Game Design Document (GDD) describing gameplay, mechanics, and feature requirements. Based on the GDD, I wrote the Technical Design Document (TDD) for the programming side, analyzing technical challenges and implementation approaches before producing development estimations for every system.
@@ -23,11 +25,15 @@ Although this documentation work initially felt less exciting than programming, 
 
 ### Local Multiplayer with Unity Input System
 
+> **Used Unity's Input System with device-pairing events to reliably map up to four controllers to players, including seamless reconnection mid-game.**
+
 Supporting four local players required a reliable way to determine which controller belonged to which player.
 
 After researching several approaches, I chose Unity's Input System, using device pairing events to dynamically assign controllers to players. The system also supported reconnecting disconnected devices without interrupting gameplay, providing a much smoother multiplayer experience.
 
 ### Lightweight Tutorial System
+
+> **Shipped a full tutorial in just a few days by combining async/await dialogue flow, per-action input-lock tracking, and an event-driven architecture.**
 
 As playtesting progressed, we realized new players struggled to learn the controls. However, the project was already approaching its deadline.
 
@@ -39,6 +45,8 @@ The entire tutorial system was completed within only a few days and successfully
 
 ### Physics Refactoring through Component-based Movement
 
+> **Refactored player movement into swappable, interface-based components so I could compare implementations freely — ultimately choosing a Rigidbody controller for a better feel.**
+
 Since the game takes place in space, player movement relied heavily on physics.
 
 The original implementation used CharacterController, but after extensive tuning, the movement still felt unnatural. Instead of replacing everything outright, I separated the movement logic from the player object by defining a movement interface and implementing movement as interchangeable components.
@@ -48,6 +56,8 @@ This allowed me to experiment with multiple movement implementations without aff
 After comparing different approaches, I ultimately chose a Rigidbody-based controller, which provided much more satisfying movement while keeping the architecture flexible for future iteration.
 
 ### Improving UI/UX through World Integration
+
+> **Rebuilt the UI as part of the game world — spaceship control panels instead of menus — using Cinemachine, DOTween, and async transitions for immersive onboarding.**
 
 Originally, the game's UI only displayed information and menu screens.
 
