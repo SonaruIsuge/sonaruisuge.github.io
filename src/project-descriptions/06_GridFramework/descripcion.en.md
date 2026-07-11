@@ -24,7 +24,7 @@ To improve modularity, the grid system exposes change notifications through dele
 
 ### Optimized A* Pathfinding
 
-> **Built an asynchronous A* pathfinding system with heap-based optimization, multithreading, terrain weighting, and path simplification to improve scalability and runtime performance.**
+> **Built an asynchronous A\* pathfinding system with heap-based optimization, multithreading, terrain weighting, and path simplification to improve scalability and runtime performance.**
 
 Navigation is implemented using the A* pathfinding algorithm on top of the generic grid framework.
 
