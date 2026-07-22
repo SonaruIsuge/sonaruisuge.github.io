@@ -87,7 +87,7 @@ Jan 2024 - Feb 2024
 Windows
 
 ## Type
-Side Project
+Personal Project
 
 ## Links
 [Repo](https://github.com/SonaruIsuge/OpenGL_exercise/tree/ShootingGame)

@@ -62,7 +62,7 @@ Unity, C#, VR, Photon Fusion, TextMeshPro, Addressables, ScriptableObject, GitLa
 Windows, Meta Quest
 
 ## Type
-会社プロジェクト
+業務プロジェクト
 
 ## Links
 [Trailer](https://www.youtube.com/watch?v=RVi0f6ZA8n8)

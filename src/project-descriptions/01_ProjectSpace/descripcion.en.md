@@ -4,7 +4,7 @@
 
 Project Space was a local cooperative party game developed during my internship over the course of two months together with another intern responsible for the art.
 
-The game supports up to four local players. Players take on the role of penguins cleaning up space debris within a limited amount of time. Each player can freely move and float in zero gravity, switching between different tools to collect trash, gather scattered objects, and sort them into recycling facilities according to the game's mechanics.
+The game supports up to four local players. Players take on the role of penguins cleaning up space debris within a limited amount of time. Each player can freely move and float in zero gravity, switching between different tools to collect trash, gather scattered objects, and sort them into the appropriate recycling facilities.
 
 --- 
 <br>
@@ -19,7 +19,7 @@ This project was my first experience participating in a professional game develo
 
 One of the biggest differences from student projects was learning how much preparation happens before development begins.
 
-During the first week, we created a complete Game Design Document (GDD) describing gameplay, mechanics, and feature requirements. Based on the GDD, I wrote the Technical Design Document (TDD) for the programming side, analyzing technical challenges and implementation approaches before producing development estimations for every system.
+During the first week, we created a complete Game Design Document (GDD) describing gameplay, mechanics, and feature requirements. Based on the GDD, I wrote the Technical Design Document (TDD) for the programming side, analyzing technical challenges and implementation approaches before estimating the development effort for each system.
 
 Although this documentation work initially felt less exciting than programming, it became the roadmap that guided the entire two-month development process and greatly improved task planning and communication.
 
@@ -37,11 +37,11 @@ After researching several approaches, I chose Unity's Input System, using device
 
 As playtesting progressed, we realized new players struggled to learn the controls. However, the project was already approaching its deadline.
 
-To rapidly implement a tutorial, I identified three essential components: `Dialogue progression` , `Player input locking` , `Dynamic UI updates`
+To rapidly implement a tutorial, I identified three essential components: dialogue progression, player input locking, and dynamic UI updates.
 
 Using asynchronous programming (async/await), I built a dialogue flow controller while maintaining a dictionary that tracked the lock state of each input action. Combined with an event-driven architecture, this allowed different gameplay mechanics to be enabled or disabled at specific tutorial stages.
 
-The entire tutorial system was completed within only a few days and successfully integrated into the game.
+The entire tutorial system was completed in only a few days and successfully integrated into the game.
 
 ### Physics Refactoring through Component-based Movement
 
@@ -77,7 +77,7 @@ Feb 2023 - April 2023
 Windows
 
 ## Type
-Company Project
+Professional Project
 
 ## Links
 [Repo](https://github.com/SonaruIsuge/ProjectSpace/tree/develop)

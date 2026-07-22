@@ -2,11 +2,11 @@
     "about": {
         "greeting": {
             "en": "Hello, I'm",
-            "jp": "こんにちは、私は"
+            "jp": "はじめまして"
         },
         "availability": {
             "en": "Open to work",
-            "jp": "お仕事募集中"
+            "jp": "お仕事のご相談を受付中"
         },
         "viewProjects": {
             "en": "View Projects",
@@ -32,41 +32,41 @@
     "projects": {
         "subtitle": {
             "en": "Selected Work",
-            "jp": "選りすぐりの作品"
+            "jp": "主な制作実績"
         },
         "title": {
             "en": "Projects",
             "jp": "プロジェクト"
         },
         "description": {
-            "en": "A collection of projects showcasing my skills.",
-            "jp": "スキルを詰め込んだプロジェクト集です。"
+            "en": "A selection of professional and personal projects highlighting my work in gameplay systems, tools, and architecture.",
+            "jp": "ゲームプレイシステム、開発ツール、アーキテクチャ設計を中心とした、業務・個人プロジェクトをご紹介します。"
         },
         "viewProject": {
             "en": "View Project",
             "jp": "プロジェクトを見る"
         },
         "companyProject": {
-            "en": "Company Project",
-            "jp": "会社プロジェクト"
+            "en": "Professional Projects",
+            "jp": "業務プロジェクト"
         },
         "sideProject": {
-            "en": "Side Project",
+            "en": "Personal Projects",
             "jp": "個人プロジェクト"
         }
     },
     "work": {
         "subtitle": {
-            "en": "My Journey",
-            "jp": "これまでの歩み"
+            "en": "Career Journey",
+            "jp": "これまでのキャリア"
         },
         "title": {
             "en": "Work Experience",
             "jp": "職務経歴"
         },
         "description": {
-            "en": "A timeline of my professional journey and achievements.",
-            "jp": "これまでのキャリアと実績をたどる軌跡です。"
+            "en": "A timeline of my professional experience, responsibilities, and contributions.",
+            "jp": "これまでの実務経験と担当業務、プロジェクトへの貢献をご紹介します。"
         }
     },
     "contact": {
@@ -76,15 +76,15 @@
         },
         "letConnect": {
             "en": "Let's Connect",
-            "jp": "つながりましょう"
+            "jp": "お気軽にご連絡ください"
         },
         "description": {
             "en": "Have a project in mind or want to collaborate? I'd love to hear from you.",
             "jp": "ご相談したいプロジェクトやコラボのご希望はありますか？ぜひお気軽にご連絡ください。"
         },
         "connectElsewhere": {
-            "en": "Connect Elsewhere",
-            "jp": "各種SNSでつながる"
+            "en": "Other Ways to Connect",
+            "jp": "その他の連絡方法"
         },
         "description2": {
             "en": "Feel free to reach out through any of these platforms.",

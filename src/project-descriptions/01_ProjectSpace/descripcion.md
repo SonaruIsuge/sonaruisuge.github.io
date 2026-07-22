@@ -35,7 +35,7 @@ Project Space は、インターン期間中にデザイナー担当のインタ
 
 プレイテストの結果、操作方法が分かりにくいことが判明したため、短期間でチュートリアルシステムを実装しました。
 
-必要な要素を：**ダイアログ**、**入力制御**、**UI更新**の3つに整理し、async/await を用いてダイアログ進行を制御しました。また、入力状態を Dictionary で管理し、イベント駆動によって各タイミングで入力の有効・無効を切り替えられる仕組みを構築しました。
+必要な要素を **ダイアログ**、**入力制御**、**UI更新** の3つに整理し、async/await を用いてダイアログ進行を制御しました。また、入力状態を Dictionary で管理し、イベント駆動によって各タイミングで入力の有効・無効を切り替えられる仕組みを構築しました。
 
 その結果、数日という短期間でチュートリアル全体を実装し、ゲームへ組み込むことができました。
 
@@ -71,7 +71,7 @@ Unity, C#, Input System, Cinemachine, DOTween, Async/Await, Interface-based Arch
 Windows
 
 ## Type
-会社プロジェクト
+業務プロジェクト
 
 ## Links
 [Repo](https://github.com/SonaruIsuge/ProjectSpace/tree/develop)

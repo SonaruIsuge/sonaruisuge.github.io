@@ -7,7 +7,7 @@ Twin Soul is a rhythm-based side-scrolling action game inspired by ancient Japan
 --- 
 <br>
 
-This project was unique because it was developed collaboratively with another game studio. Their team owned the project's architecture and development workflow, while our team was responsible for implementing new features within their framework.Working in a cross-company environment required more than programming skills. I needed to quickly understand a large existing codebase, communicate technical issues clearly across teams, and design systems that fit seamlessly into an unfamiliar architecture.
+This project was unique because it was developed collaboratively with another game studio. Their team owned the project's architecture and development workflow, while our team was responsible for implementing new features within their framework. Working in a cross-company environment required more than programming skills. I needed to quickly understand a large existing codebase, communicate technical issues clearly across teams, and design systems that fit seamlessly into an unfamiliar architecture.
 
 ## Technical Highlights
 
@@ -112,7 +112,7 @@ Jan 2024 - Jan 2025
 Windows
 
 ## Type
-Company Project
+Professional Project
 
 ## Links
 [Steam Page](https://store.steampowered.com/app/3844290/Twin_Soul/)

@@ -1,29 +1,35 @@
 [
     {
         "year": {
-            "en": "10/2024 - 06/2026",
-            "jp": "10/2024 - 06/2026"
+            "en": "Oct 2024 – Jun 2026",
+            "jp": "2024年10月 – 2026年6月"
         },
         "title": {
             "en": "Game Engineer",
             "jp": "ゲームエンジニア"
         },
-        "company": "株式会社Skeleton Crew Studio",
+        "company": {
+            "en": "Skeleton Crew Studio, Inc.",
+            "jp": "株式会社Skeleton Crew Studio"
+        },
         "description": {
-            "en": "After joining the company as a full-time Game Programmer, I contributed to multiple game projects by developing gameplay systems, implementing NPC behaviors and state machines, creating internal development tools, and optimizing game systems for better performance. I also worked closely with designers and other engineers to build scalable and maintainable gameplay features. I also participated in code reviews, communicated with team members to resolve technical challenges, and contributed to the overall improvement of the development workflow.",
+            "en": "After joining the company as a full-time Game Programmer, I contributed to multiple game projects by developing gameplay systems, implementing NPC behaviors and state machines, creating internal development tools, and optimizing game systems for better performance. I worked closely with designers and other engineers to build scalable and maintainable gameplay features, participated in code reviews, collaborated with team members to resolve technical challenges, and helped improve the overall development workflow.",
             "jp": "社員登用後は、複数のゲーム開発プロジェクトに携わり、ゲームシステムの設計・実装、NPCのステートマシン開発、開発支援ツールの制作、各種システムのパフォーマンス最適化などを担当しました。また、プランナーや他のエンジニアと連携しながら、拡張性と保守性を考慮したゲーム機能の開発を行いました。さらに、コードレビューに参加し、チームメンバーと技術的な課題を解決するためのコミュニケーションを行い、開発ワークフローの改善にも貢献しました。"
         }
     },
     {
         "year": {
-            "en": "02/2023 - 07/2023",
-            "jp": "02/2023 - 07/2023"
+            "en": "Feb 2023 – Jul 2023",
+            "jp": "2023年2月 – 2023年7月"
         },
         "title": {
-            "en": "Intern",
-            "jp": "インターン"
+            "en": "Game Programmer Intern",
+            "jp": "ゲームプログラマー（インターン）"
         },
-        "company": "株式会社Skeleton Crew Studio",
+        "company": {
+            "en": "Skeleton Crew Studio, Inc.",
+            "jp": "株式会社Skeleton Crew Studio"
+        },
         "description": {
             "en": "During my internship, I collaborated with another intern to design and develop a local co-op PC game from scratch within two months. I was responsible for the entire programming side of the project, including gameplay systems and core game logic.\n After completing the project, I joined the development of the company's VR multiplayer title, where I implemented interactive VR gameplay objects, refactored parts of the UI architecture, and optimized several in-game systems to improve maintainability and performance.",
             "jp": "インターン期間中、他のインターンと協力して2か月以内にローカルコープのPCゲームをゼロから設計・開発しました。プロジェクトのプログラミング全般を担当し、ゲームシステムとコアゲームロジックの実装を行いました。\n プロジェクト完了後、同社のVRマルチプレイヤータイトルの開発に参加し、インタラクティブなVRゲームオブジェクトの実装、UIアーキテクチャのリファクタリング、および複数のゲーム内システムの最適化を行い、保守性とパフォーマンスの向上に貢献しました。"

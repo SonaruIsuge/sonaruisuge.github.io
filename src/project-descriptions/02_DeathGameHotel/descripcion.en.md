@@ -61,7 +61,7 @@ Apr 2023 - Jul 2023
 Windows, Meta Quest
 
 ## Type
-Company Project
+Professional Project
 
 ## Links
 [Trailer](https://www.youtube.com/watch?v=RVi0f6ZA8n8)

@@ -1,20 +1,20 @@
 {
     "about": {
         "name": {
-            "en": "YiHo Chen",
-            "jp": "チェン　イーホ"
+            "en": "Yi-Ho Chen",
+            "jp": "チェン・イーホ"
         },
         "description": {
-            "en": "Game Developer with about 2 years of experience, specialized in create gameplay systems, architecture design, and development tools.",
-            "jp": "ゲーム開発者で、約2年間の経験があり、ゲームプレイシステム、アーキテクチャ設計、開発ツールの作成に特化しています。"
+            "en": "Game developer with around two years of professional experience, specializing in gameplay systems, software architecture, and development tools.",
+            "jp": "約2年の実務経験を持つゲーム開発者です。ゲームプレイシステム、アーキテクチャ設計、開発ツールの実装を得意としています。"
         },
         "roleTitle": {
             "en": "Game Developer",
             "jp": "ゲーム開発者"
         },
         "aboutDesc": {
-            "en": "I am a Unity gameplay/client programmer with experience developing commercial games. I enjoy designing and implementing gameplay systems, AI, UI, and development tools while keeping scalability, maintainability, and performance in mind.\n Beyond feature implementation, I like understanding how complex systems work, organizing their architecture, and finding practical solutions that improve both the player experience and the development workflow. I have contributed to performance optimization, editor tooling, and reusable systems that help teams build games more efficiently.\n I thrive in collaborative, international development environments and enjoy learning new technologies that can make games more polished, scalable, and enjoyable for players.",
-            "jp": "私は商用ゲームの開発経験を持つUnityのゲームプレイ/クライアントプログラマーです。スケーラビリティ、保守性、パフォーマンスを考慮しながら、ゲームプレイシステム、AI、UI、開発ツールの設計と実装を楽しんでいます。\n 機能の実装だけでなく、複雑なシステムがどのように機能するかを理解し、そのアーキテクチャを整理し、プレイヤー体験と開発ワークフローの両方を改善する実用的なソリューションを見つけることが好きです。パフォーマンスの最適化、エディタツールの作成、チームがより効率的にゲームを構築できる再利用可能なシステムに貢献してきました。\n 私は協力的で国際的な開発環境で活躍し、ゲームをより洗練され、スケーラブルで、プレイヤーにとって楽しいものにする新しい技術を学ぶことを楽しんでいます。"
+            "en": "I am a Unity gameplay and client programmer with experience developing commercial games. I enjoy designing and implementing gameplay systems, AI, UI, and development tools while keeping scalability, maintainability, and performance in mind.\n Beyond feature implementation, I like understanding how complex systems work, structuring their architecture, and finding practical solutions that improve both the player experience and the development workflow. I have contributed to performance optimization, editor tooling, and reusable systems that help teams build games more efficiently.\n I thrive in collaborative, international development environments and enjoy learning new technologies that can make games more polished, robust, and enjoyable for players.",
+            "jp": "私は商用ゲームの開発経験を持つUnityのゲームプレイ／クライアントプログラマーです。拡張性、保守性、パフォーマンスを意識しながら、ゲームプレイシステム、AI、UI、開発ツールを設計・実装することを得意としています。\n 機能を実装するだけでなく、複雑なシステムの仕組みを理解してアーキテクチャを整理し、プレイヤー体験と開発ワークフローの両方を改善する実用的な解決策を考えることが好きです。これまで、パフォーマンス最適化、エディタツール、チームの開発効率を高める再利用可能なシステムの開発に携わってきました。\n チームで協力する国際的な開発環境を好み、ゲームをより洗練された、堅牢で楽しいものにするための新しい技術を学び続けています。"
         }
     },
     "techStack": [
