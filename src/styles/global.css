@@ -168,110 +168,6 @@ html[data-lang="en"] .locale-jp {
 	color: white;
 }
 
-.cv-download-card {
-	position: relative;
-	overflow: hidden;
-	width: min(100%, 22rem);
-	min-height: 13rem;
-	padding: 1.25rem;
-	border-radius: 1rem;
-	border: 2px solid rgb(55 65 81 / 0.9);
-	background: radial-gradient(circle at 20% 20%, rgb(55 65 81 / 0.9), rgb(17 24 39));
-	transform: rotate(-6deg);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	box-shadow: 0 20px 40px rgb(15 23 42 / 0.35);
-	text-align: left;
-}
-
-.cv-download-card:hover {
-	transform: rotate(0deg) translateY(-4px);
-	box-shadow: 0 24px 50px rgb(15 23 42 / 0.45);
-}
-
-.cv-download-card-inner {
-	position: relative;
-	z-index: 2;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 1rem;
-}
-
-.cv-initials {
-	display: inline-block;
-	font-size: clamp(2rem, 5vw, 2.8rem);
-	line-height: 1;
-	font-weight: 800;
-	letter-spacing: -0.02em;
-}
-
-.cv-role {
-	margin-top: 0.25rem;
-	font-size: 0.9rem;
-	color: rgb(226 232 240);
-}
-
-.cv-download-button {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.6rem;
-	padding: 0.55rem 0.95rem;
-	border-radius: 9999px;
-	border: 1px solid rgb(226 232 240 / 0.7);
-	background: rgb(248 250 252);
-	color: rgb(15 23 42);
-	font-size: 0.9rem;
-	font-weight: 700;
-	transition: all 0.3s ease;
-	text-decoration: none;
-}
-
-.cv-download-button:hover {
-	background: rgb(15 23 42);
-	color: rgb(248 250 252);
-	border-color: rgb(148 163 184 / 0.8);
-}
-
-.cv-avatar {
-	position: absolute;
-	bottom: -0.4rem;
-	right: -4.5rem;
-	width: 11rem;
-	height: 11rem;
-	z-index: 1;
-	transition: transform 0.35s ease;
-	fill: rgb(248 250 252 / 0.95);
-}
-
-.cv-avatar-main {
-	stroke: rgb(15 23 42);
-	stroke-width: 4;
-	stroke-miterlimit: 10;
-}
-
-.cv-avatar-accent {
-	stroke: rgb(71 85 105);
-	stroke-width: 2;
-	stroke-miterlimit: 10;
-	transition-duration: 0.2s;
-}
-
-.cv-download-card:hover .cv-avatar {
-	transform: scale(1.12);
-}
-
-html.dark .cv-download-card {
-	border-color: rgb(100 116 139 / 0.7);
-	background: radial-gradient(circle at 20% 20%, rgb(51 65 85), rgb(2 6 23));
-}
-
-@media (max-width: 640px) {
-	.cv-download-card {
-		transform: rotate(0deg);
-		width: 100%;
-	}
-}
-
 .prose h2 {
 	@apply text-2xl font-bold text-gray-900 dark:text-white mt-10 mb-4;
 }
@@ -306,4 +202,405 @@ html.dark .cv-download-card {
 
 .prose blockquote p {
 	@apply mb-0 not-italic font-medium text-gray-700 dark:text-gray-300;
+}
+
+/* Sci-fi HUD visual system: palette, typography, and controls only. */
+:root {
+	--hud-bg: #eef1ee;
+	--hud-panel: #f8faf8;
+	--hud-inset: #e4e9e4;
+	--hud-ink: #111713;
+	--hud-text: #455048;
+	--hud-muted: #68746b;
+	--hud-action: #167f32;
+	--hud-signal: #39ff14;
+	--hud-on-action: #ffffff;
+	--hud-line: rgb(22 127 50 / 22%);
+	--hud-line-strong: rgb(22 127 50 / 48%);
+	--hud-grid: rgb(22 127 50 / 6%);
+}
+
+html.dark {
+	--hud-bg: #070907;
+	--hud-panel: #0d120e;
+	--hud-inset: #121813;
+	--hud-ink: #eef7ef;
+	--hud-text: #a3afa5;
+	--hud-muted: #6f7c71;
+	--hud-action: #39ff14;
+	--hud-signal: #39ff14;
+	--hud-on-action: #061006;
+	--hud-line: rgb(57 255 20 / 18%);
+	--hud-line-strong: rgb(57 255 20 / 52%);
+	--hud-grid: rgb(57 255 20 / 4%);
+}
+
+.hud-interface {
+	background-color: var(--hud-bg) !important;
+	background-image:
+		linear-gradient(var(--hud-grid) 1px, transparent 1px),
+		linear-gradient(90deg, var(--hud-grid) 1px, transparent 1px);
+	background-size: 48px 48px;
+	color: var(--hud-ink);
+	font-family: Inter, "Noto Sans JP", system-ui, -apple-system, sans-serif;
+}
+
+.hud-interface main {
+	background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--hud-bg) 92%, transparent));
+}
+
+.hud-interface :is(h1, h2, h3) {
+	color: var(--hud-ink) !important;
+	font-family: Rajdhani, "Noto Sans JP", system-ui, sans-serif;
+	font-weight: 600 !important;
+	letter-spacing: -0.025em;
+}
+
+.hud-interface :is(p, li) {
+	text-wrap: pretty;
+}
+
+.hud-interface :is(.text-gray-900, .text-gray-800, .dark\:text-white, .dark\:text-gray-200) {
+	color: var(--hud-ink) !important;
+}
+
+.hud-interface :is(.text-gray-700, .text-gray-600, .dark\:text-gray-300, .dark\:text-gray-400) {
+	color: var(--hud-text) !important;
+}
+
+.hud-interface :is(.text-gray-500, .text-gray-400) {
+	color: var(--hud-muted) !important;
+}
+
+.hud-interface :is(.bg-white, .dark\:bg-gray-950) {
+	background-color: var(--hud-bg) !important;
+}
+
+.hud-interface :is(.bg-gray-50, .bg-gray-100, .dark\:bg-gray-800, .dark\:bg-gray-900\/50) {
+	background-color: var(--hud-panel) !important;
+}
+
+.hud-interface :is(.border-gray-200, .border-gray-300, .dark\:border-gray-600, .dark\:border-gray-700, .dark\:border-gray-800) {
+	border-color: var(--hud-line) !important;
+}
+
+.hud-interface :is(.tracking-wider.uppercase, .uppercase.tracking-wider) {
+	color: var(--hud-muted) !important;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 0.7rem;
+	font-weight: 500 !important;
+	letter-spacing: 0.12em;
+}
+
+.hud-interface :is(p, h2).tracking-wider.uppercase::before {
+	content: "// ";
+	color: var(--hud-action);
+}
+
+.hud-nav-panel {
+	position: relative;
+	background: color-mix(in srgb, var(--hud-panel) 88%, transparent) !important;
+	border-color: var(--hud-line) !important;
+	border-radius: 5px !important;
+	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+	box-shadow: 0 0 0 1px rgb(0 0 0 / 18%), 0 8px 32px rgb(0 0 0 / 12%);
+}
+
+.hud-nav-links a,
+.hud-control,
+.hud-mobile-panel a {
+	font-family: "IBM Plex Mono", monospace;
+	letter-spacing: 0.04em;
+}
+
+.hud-nav-links a {
+	position: relative;
+	color: var(--hud-text) !important;
+}
+
+.hud-nav-links a:hover,
+.hud-nav-links .hud-nav-active {
+	color: var(--hud-action) !important;
+}
+
+.hud-nav-links a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 100%;
+	bottom: -0.45rem;
+	height: 1px;
+	background: var(--hud-action);
+	transition: right 160ms ease;
+}
+
+.hud-nav-links a:hover::after {
+	right: 0;
+}
+
+.hud-nav-links .hud-nav-active::after {
+	right: 0;
+}
+
+.hud-control {
+	min-width: 2rem;
+	min-height: 2rem;
+	border: 1px solid var(--hud-line) !important;
+	border-radius: 3px !important;
+	background: var(--hud-inset) !important;
+	color: var(--hud-text) !important;
+	clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 0 100%);
+}
+
+.hud-control:hover,
+.hud-control:focus-visible {
+	border-color: var(--hud-line-strong) !important;
+	color: var(--hud-action) !important;
+	box-shadow: 0 0 12px color-mix(in srgb, var(--hud-signal) 20%, transparent);
+}
+
+.hud-mobile-panel {
+	background: color-mix(in srgb, var(--hud-panel) 94%, transparent) !important;
+	border-color: var(--hud-line) !important;
+	border-radius: 4px !important;
+}
+
+.hud-mobile-panel a:hover {
+	background: var(--hud-inset) !important;
+	color: var(--hud-action) !important;
+}
+
+.hud-button {
+	position: relative;
+	overflow: hidden;
+	min-height: 2.75rem;
+	min-width: 10.5rem;
+	justify-content: center;
+	border-radius: 3px !important;
+	clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 0.8rem !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.hud-button::after {
+	content: "";
+	position: absolute;
+	top: -30%;
+	bottom: -30%;
+	left: -45%;
+	width: 28%;
+	background: linear-gradient(90deg, transparent, rgb(255 255 255 / 42%), transparent);
+	transform: skewX(-18deg);
+	pointer-events: none;
+}
+
+.hud-button:hover::after,
+.hud-button:focus-visible::after {
+	animation: hud-scan 420ms ease-out;
+}
+
+.hud-button:hover {
+	transform: translateY(-2px);
+}
+
+.hud-button-primary {
+	background: color-mix(in srgb, var(--hud-action) 12%, var(--hud-panel)) !important;
+	border-color: var(--hud-line-strong) !important;
+	color: var(--hud-action) !important;
+	box-shadow: inset 3px 0 0 var(--hud-action);
+}
+
+.hud-button-secondary {
+	background: transparent !important;
+	border-color: var(--hud-line-strong) !important;
+	color: var(--hud-action) !important;
+}
+
+.hud-button-secondary:hover {
+	background: color-mix(in srgb, var(--hud-action) 9%, transparent) !important;
+	box-shadow: 0 0 16px color-mix(in srgb, var(--hud-signal) 12%, transparent);
+}
+
+.hud-button-tertiary {
+	background: transparent !important;
+	border-color: var(--hud-line) !important;
+	color: var(--hud-muted) !important;
+}
+
+.hud-button-tertiary:hover {
+	border-color: var(--hud-line-strong) !important;
+	color: var(--hud-action) !important;
+}
+
+.hud-status {
+	border-radius: 3px !important;
+	background: color-mix(in srgb, var(--hud-panel) 82%, transparent);
+	clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 0 100%);
+}
+
+.hud-status p {
+	display: flex;
+	align-items: center;
+	gap: 0.55rem;
+	color: var(--hud-action) !important;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 0.7rem !important;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.hud-status p::before {
+	content: "";
+	width: 0.45rem;
+	height: 0.45rem;
+	background: var(--hud-signal);
+	box-shadow: 0 0 10px var(--hud-signal);
+}
+
+.animated-border::before {
+	background: linear-gradient(90deg, transparent 0 20%, var(--hud-action) 45%, transparent 70% 100%);
+	background-size: 300% 100%;
+	animation: none;
+	opacity: 0;
+}
+
+.animated-border:hover::before,
+.animated-border:focus-visible::before {
+	opacity: 1;
+	animation: hud-border-scan 500ms ease-out;
+}
+
+.animated-border.always-visible::before {
+	opacity: 0.55;
+}
+
+.hud-panel {
+	position: relative;
+	background: color-mix(in srgb, var(--hud-panel) 88%, transparent) !important;
+	border-color: var(--hud-line) !important;
+	box-shadow: inset 0 0 0 1px rgb(255 255 255 / 2%);
+}
+
+.hud-panel::after {
+	content: "";
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	width: 12px;
+	height: 12px;
+	border-top: 1px solid var(--hud-action);
+	border-right: 1px solid var(--hud-action);
+	pointer-events: none;
+}
+
+.hud-panel:hover {
+	border-color: var(--hud-line-strong) !important;
+	box-shadow: 0 0 20px color-mix(in srgb, var(--hud-signal) 8%, transparent);
+}
+
+.hud-project-card h3,
+.hud-timeline-item h3 {
+	font-family: Rajdhani, "Noto Sans JP", system-ui, sans-serif;
+}
+
+.hud-project-card:hover h3,
+.hud-project-card:hover span,
+.hud-timeline-item:hover h3 {
+	color: var(--hud-action) !important;
+}
+
+.hud-timeline-item {
+	border-color: var(--hud-line) !important;
+}
+
+.hud-timeline-item > div:first-child {
+	background: var(--hud-action) !important;
+	border-radius: 2px !important;
+	box-shadow: 0 0 12px color-mix(in srgb, var(--hud-signal) 45%, transparent);
+}
+
+.hud-chip,
+.hud-badge {
+	border: 1px solid var(--hud-line) !important;
+	border-radius: 3px !important;
+	background: var(--hud-inset) !important;
+	color: var(--hud-text) !important;
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 0.72rem !important;
+	letter-spacing: 0.04em;
+}
+
+.hud-chip:hover,
+.hud-badge {
+	border-color: var(--hud-line-strong) !important;
+	color: var(--hud-action) !important;
+}
+
+.hud-platform,
+.hud-text-link,
+.prose a {
+	color: var(--hud-action) !important;
+}
+
+.hud-text-link {
+	font-family: "IBM Plex Mono", monospace;
+	font-size: 0.78rem;
+	letter-spacing: 0.03em;
+}
+
+.hud-text-link:hover {
+	text-shadow: 0 0 10px color-mix(in srgb, var(--hud-signal) 35%, transparent);
+}
+
+.prose :is(p, li) {
+	color: var(--hud-text) !important;
+}
+
+.prose blockquote {
+	border-color: var(--hud-action) !important;
+	background: var(--hud-panel) !important;
+	border-radius: 0 3px 3px 0 !important;
+}
+
+.hud-footer {
+	background: var(--hud-panel) !important;
+	border-color: var(--hud-line) !important;
+}
+
+.hud-footer p,
+.hud-footer span {
+	font-family: "IBM Plex Mono", monospace;
+	letter-spacing: 0.03em;
+}
+
+.lang-change-modal h2 {
+	font-family: Rajdhani, "Noto Sans JP", system-ui, sans-serif;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+}
+
+.hud-interface :focus-visible {
+	outline: 2px solid var(--hud-action);
+	outline-offset: 3px;
+}
+
+@keyframes hud-scan {
+	from { left: -45%; }
+	to { left: 120%; }
+}
+
+@keyframes hud-border-scan {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.hud-button::after,
+	.animated-border::before {
+		animation: none !important;
+	}
 }

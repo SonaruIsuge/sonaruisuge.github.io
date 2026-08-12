@@ -12,7 +12,7 @@ import aboutData from "../data/about.json";
 <Layout title={`Home | Yi-Ho Chen - Portfolio`}>
 	<Header />
 
-	<main class="min-h-screen px-4 sm:px-6 md:px-6">
+	<main class="hud-main min-h-screen px-4 sm:px-6 md:px-6">
 		<section
 			class="max-w-3xl mx-auto min-h-[calc(100vh-5rem)] flex flex-col justify-center pt-32 sm:pt-48 pb-16 sm:pb-24 fade-in"
 		>
@@ -35,7 +35,7 @@ import aboutData from "../data/about.json";
 						>
 					</div>
 					<div
-						class="animated-border always-visible px-3 sm:px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 h-fit"
+						class="hud-status animated-border always-visible px-3 sm:px-4 py-2 rounded-full border border-gray-300 dark:border-gray-600 h-fit"
 					>
 						<p
 							class="text-xs sm:text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap"
@@ -73,7 +73,7 @@ import aboutData from "../data/about.json";
 					>
 						<a
 							href="/projects"
-							class="cursor-pointer px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full hover:animated-bg transition-all"
+							class="hud-button hud-button-primary cursor-pointer px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base bg-gray-900 dark:bg-white text-white dark:text-gray-900 font-medium rounded-full hover:animated-bg transition-all"
 							data-en={translation.about.viewProjects.en}
 							data-jp={translation.about.viewProjects.jp}
 						>
@@ -81,69 +81,22 @@ import aboutData from "../data/about.json";
 						</a>
 						<a
 							href="/contact"
-							class="animated-border cursor-pointer px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white font-medium rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+							class="hud-button hud-button-secondary animated-border cursor-pointer px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white font-medium rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
 							data-en={translation.about.getInTouch.en}
 							data-jp={translation.about.getInTouch.jp}
 						>
 							{translation.about.getInTouch.en}
 						</a>
-					</div>
-					<div class="mt-8 sm:mt-10 flex justify-center px-2 sm:px-0">
-						<article
-							class="cv-download-card group"
-							aria-label="Download CV card"
+						<a
+							href={cvFile}
+							download="CV_Yiho_Chen.pdf"
+							class="hud-button hud-button-tertiary animated-border cursor-pointer px-4 sm:px-5 py-2 sm:py-2.5 text-sm sm:text-base border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white font-medium rounded-full transition-colors"
+							data-en={translation.about.downloadCv.en}
+							data-jp={translation.about.downloadCv.jp}
 						>
-							<div class="cv-download-card-inner">
-								<div class="text-gray-50 text-left">
-									<span class="cv-initials">YC</span>
-									<p
-										class="cv-role"
-										data-en={aboutData.about.roleTitle.en}
-										data-jp={aboutData.about.roleTitle.jp}
-									>
-										{aboutData.about.roleTitle.en}
-									</p>
-								</div>
-								<a
-									href={cvFile}
-									download="CV_Yiho_Chen.pdf"
-									class="cv-download-button"
-									data-en={translation.about.downloadCv.en}
-									data-jp={translation.about.downloadCv.jp}
-								>
-									<span>{translation.about.downloadCv.en}</span>
-									<svg
-										class="w-5 h-5 fill-current"
-										viewBox="0 0 100 100"
-										xmlns="http://www.w3.org/2000/svg"
-										aria-hidden="true"
-									>
-										<path
-											d="M22.1,77.9a4,4,0,0,1,4-4H73.9a4,4,0,0,1,0,8H26.1A4,4,0,0,1,22.1,77.9ZM35.2,47.2a4,4,0,0,1,5.7,0L46,52.3V22.1a4,4,0,1,1,8,0V52.3l5.1-5.1a4,4,0,0,1,5.7,0,4,4,0,0,1,0,5.6l-12,12a3.9,3.9,0,0,1-5.6,0l-12-12A4,4,0,0,1,35.2,47.2Z"
-											fill-rule="evenodd"></path>
-									</svg>
-								</a>
-							</div>
-
-							<svg
-								class="cv-avatar cv-avatar-main"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 64 64"
-								aria-hidden="true"
-								><path
-									d="M50.4 51C40.5 49.1 40 46 40 44v-1.2a18.9 18.9 0 0 0 5.7-8.8h.1c3 0 3.8-6.3 3.8-7.3s.1-4.7-3-4.7C53 4 30 0 22.3 6c-5.4 0-5.9 8-3.9 16-3.1 0-3 3.8-3 4.7s.7 7.3 3.8 7.3c1 3.6 2.3 6.9 4.7 9v1.2c0 2 .5 5-9.5 6.8S2 62 2 62h60a14.6 14.6 0 0 0-11.6-11z"
-								></path></svg
-							>
-							<svg
-								class="cv-avatar cv-avatar-accent"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 64 64"
-								aria-hidden="true"
-								><path
-									d="M50.4 51C40.5 49.1 40 46 40 44v-1.2a18.9 18.9 0 0 0 5.7-8.8h.1c3 0 3.8-6.3 3.8-7.3s.1-4.7-3-4.7C53 4 30 0 22.3 6c-5.4 0-5.9 8-3.9 16-3.1 0-3 3.8-3 4.7s.7 7.3 3.8 7.3c1 3.6 2.3 6.9 4.7 9v1.2c0 2 .5 5-9.5 6.8S2 62 2 62h60a14.6 14.6 0 0 0-11.6-11z"
-								></path></svg
-							>
-						</article>
+							{translation.about.downloadCv.en}
+							<span aria-hidden="true">↓</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -184,7 +137,7 @@ import aboutData from "../data/about.json";
 					<!-- First set -->
 					{
 						aboutData.techStack.map((tech) => (
-							<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
+							<div class="hud-chip cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
 								<p class="text-sm font-medium text-gray-900 dark:text-white">
 									{tech}
 								</p>
@@ -195,7 +148,7 @@ import aboutData from "../data/about.json";
 					<!-- Second set for seamless looping -->
 					{
 						aboutData.techStack.map((tech) => (
-							<div class="cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
+							<div class="hud-chip cursor-pointer px-4 py-2 rounded-full bg-transparent border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all hover:scale-105 whitespace-nowrap">
 								<p class="text-sm font-medium text-gray-900 dark:text-white">
 									{tech}
 								</p>

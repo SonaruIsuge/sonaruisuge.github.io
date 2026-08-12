@@ -3,16 +3,16 @@ const currentPage = Astro.url.pathname;
 ---
 
 <nav
-	class="fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 sm:pt-6 px-4"
+	class="hud-nav fixed top-0 left-0 right-0 z-50 flex justify-center pt-3 sm:pt-6 px-4"
 >
 	<div
-		class="backdrop-blur-md bg-white/80 dark:bg-gray-950/80 border border-gray-200 dark:border-gray-700 rounded-full px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-between sm:justify-center gap-2 sm:gap-6 shadow-sm w-full sm:w-auto"
+		class="hud-nav-panel backdrop-blur-md bg-white/80 dark:bg-gray-950/80 border border-gray-200 dark:border-gray-700 rounded-full px-4 sm:px-6 py-2 sm:py-3 flex items-center justify-between sm:justify-center gap-2 sm:gap-6 shadow-sm w-full sm:w-auto"
 	>
 		<!-- Desktop Links -->
-		<div class="hidden sm:flex items-center gap-6">
+		<div class="hud-nav-links hidden sm:flex items-center gap-6">
 			<a
 				href="/"
-				class={`text-sm font-medium transition-colors whitespace-nowrap ${currentPage === "/" ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"}`}
+				class={`text-sm font-medium transition-colors whitespace-nowrap ${currentPage === "/" ? "hud-nav-active text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"}`}
 				data-en="Home"
 				data-jp="ホーム"
 			>
@@ -20,7 +20,7 @@ const currentPage = Astro.url.pathname;
 			</a>
 			<a
 				href="/projects"
-				class={`text-sm font-medium transition-colors whitespace-nowrap ${currentPage === "/projects" ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"}`}
+				class={`text-sm font-medium transition-colors whitespace-nowrap ${currentPage === "/projects" ? "hud-nav-active text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"}`}
 				data-en="Projects"
 				data-jp="プロジェクト"
 			>
@@ -28,7 +28,7 @@ const currentPage = Astro.url.pathname;
 			</a>
 			<a
 				href="/work"
-				class={`text-sm font-medium transition-colors whitespace-nowrap ${currentPage === "/work" ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"}`}
+				class={`text-sm font-medium transition-colors whitespace-nowrap ${currentPage === "/work" ? "hud-nav-active text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"}`}
 				data-en="Work"
 				data-jp="職務経歴"
 			>
@@ -36,7 +36,7 @@ const currentPage = Astro.url.pathname;
 			</a>
 			<a
 				href="/contact"
-				class={`text-sm font-medium transition-colors whitespace-nowrap ${currentPage === "/contact" ? "text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"}`}
+				class={`text-sm font-medium transition-colors whitespace-nowrap ${currentPage === "/contact" ? "hud-nav-active text-gray-900 dark:text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"}`}
 				data-en="Contact"
 				data-jp="お問い合わせ"
 			>
@@ -51,14 +51,14 @@ const currentPage = Astro.url.pathname;
 			<button
 				id="lang-btn"
 				onclick="window.toggleLang()"
-				class="px-2 py-1 text-xs font-bold rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer whitespace-nowrap"
+				class="hud-control px-2 py-1 text-xs font-bold rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer whitespace-nowrap"
 			>
 				EN
 			</button>
 
 			<button
 				onclick="window.toggleTheme()"
-				class="p-1 sm:p-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer flex-shrink-0"
+				class="hud-control p-1 sm:p-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer flex-shrink-0"
 				aria-label="Toggle theme"
 			>
 				<svg
@@ -93,7 +93,7 @@ const currentPage = Astro.url.pathname;
 		<!-- Mobile Hamburger Button -->
 		<button
 			id="mobile-menu-btn"
-			class="sm:hidden p-1.5 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
+			class="hud-control sm:hidden p-1.5 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors cursor-pointer"
 			aria-label="Toggle menu"
 		>
 			<svg
@@ -128,7 +128,7 @@ const currentPage = Astro.url.pathname;
 	<!-- Mobile Menu Dropdown -->
 	<div
 		id="mobile-menu"
-		class="hidden absolute top-14 left-4 right-4 backdrop-blur-md bg-white/80 dark:bg-gray-950/80 border border-gray-200 dark:border-gray-700 rounded-2xl px-4 py-3 space-y-2 shadow-lg sm:hidden"
+		class="hud-mobile-panel hidden absolute top-14 left-4 right-4 backdrop-blur-md bg-white/80 dark:bg-gray-950/80 border border-gray-200 dark:border-gray-700 rounded-2xl px-4 py-3 space-y-2 shadow-lg sm:hidden"
 	>
 		<a
 			href="/"
