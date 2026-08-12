@@ -6,7 +6,7 @@
         },
         "availability": {
             "en": "Open to work",
-            "jp": "お仕事のご相談を受付中"
+            "jp": "就職活動中"
         },
         "viewProjects": {
             "en": "View Projects",
@@ -83,12 +83,8 @@
             "jp": "ご相談したいプロジェクトやコラボのご希望はありますか？ぜひお気軽にご連絡ください。"
         },
         "connectElsewhere": {
-            "en": "Other Ways to Connect",
-            "jp": "その他の連絡方法"
-        },
-        "description2": {
-            "en": "Feel free to reach out through any of these platforms.",
-            "jp": "以下のいずれのプラットフォームからでもお気軽にご連絡ください。"
+            "en": "Ways to Connect",
+            "jp": "連絡方法"
         },
         "contactInfo": {
             "en": "Contact Info",
