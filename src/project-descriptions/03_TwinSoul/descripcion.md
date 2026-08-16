@@ -108,7 +108,7 @@ Twin Soul は、日本神話をモチーフにしたリズムアクション型�
 Unity, C#, GPU Instancing, Addressables, Input System, ScriptableObject, Custom Editor, Object Pooling, Design Pattern, Regular Expression, Performance Optimization, Git
 
 ## Period
-2024年1月 - 2025年1月
+2025年1月 - 2026年1月
 
 ## Platform
 Windows

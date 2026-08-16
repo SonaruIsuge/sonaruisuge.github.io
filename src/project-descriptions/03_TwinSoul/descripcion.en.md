@@ -106,7 +106,7 @@ Seeing a small tool become part of everyone's daily workflow was especially rewa
 Unity, C#, GPU Instancing, Addressables, Input System, ScriptableObject, Custom Editor, Object Pooling, Design Pattern, Regular Expression, Performance Optimization, Git
 
 ## Period
-Jan 2024 - Jan 2025
+Jan 2025 - Jan 2026
 
 ## Platform
 Windows

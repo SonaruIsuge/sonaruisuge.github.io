@@ -57,7 +57,7 @@ Upgrade Managerでは、ゲーム内に存在するすべてのアップグレ�
 Unity, C#, State Machine, Event System, ScriptableObject, UniTask, Object Pooling, Design Patterns, Git
 
 ## Period
-2025年2月 - 2025年6月
+2026年2月 - 2026年6月
 
 ## Platform
 Windows, Mobile

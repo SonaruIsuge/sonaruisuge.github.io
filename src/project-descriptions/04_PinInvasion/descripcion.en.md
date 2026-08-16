@@ -55,7 +55,7 @@ This architecture made it straightforward to introduce new upgrades and abilitie
 Unity, C#, State Machine, Event System, ScriptableObject, UniTask, Object Pooling, Design Patterns, Git
 
 ## Period
-Feb 2025 - Jun 2025
+Feb 2026 - Jun 2026
 
 ## Platform
 Windows, Mobile
